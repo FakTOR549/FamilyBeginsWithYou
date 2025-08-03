@@ -1,229 +1,309 @@
-<!DOCTYPE html lang="en">
-<html lang="en">
+<!DOCTYPE html>
+<!-- Указывает браузеру, что это HTML5-документ -->
+
+<html lang="ru">
+<!-- Начало HTML-документа, lang="en" устанавливает английский язык -->
 
 <head>
+    <!-- Начало секции заголовка страницы, где хранятся метаданные и ссылки -->
     <meta charset="utf-8">
+    <!-- Устанавливает кодировку символов как UTF-8 для поддержки разных языков -->
     <title>Егор и Дарья | Свадьба</title>
+    <!-- Устанавливает заголовок страницы, который виден в вкладке браузера -->
     <link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
-    <!-- <link rel="apple-touch-icon" href="/assets/favicon.ico">
-    <link rel="icon" sizes="192x192" href="/assets/favicon.ico"> -->
-
+    <!-- Добавляет иконку для вкладки браузера (favicon) -->
     <meta property="og:site_name" content="Егор и Дарья | Свадьба" />
+    <!-- Устанавливает имя сайта для социальных сетей (Open Graph) -->
     <meta property="og:url" content="ourwildwedding.it" />
+    <!-- Указывает URL сайта для социальных сетей -->
     <meta property="og:type" content="website" />
+    <!-- Определяет тип контента как веб-сайт -->
     <meta name="title" property="og:title" content="Егор и Дарья | Свадьба" />
-    <meta name="image" property="og:image"
-        content="https://raw.githubusercontent.com/francesco-puppo/wedding/main/assets/hero-bg.jpg" />
+    <!-- Устанавливает заголовок для социальных сетей -->
+    <meta name="image" property="og:image" content="https://raw.githubusercontent.com/francesco-puppo/wedding/main/assets/hero-bg.jpg" />
+    <!-- Указывает основное изображение для предпросмотра в соцсетях -->
     <meta property="og:image:type" content="image/jpg">
+    <!-- Указывает тип изображения (JPEG) -->
     <meta property="og:image:width" content="2500">
+    <!-- Устанавливает ширину изображения в пикселях -->
     <meta property="og:image:height" content="1475">
+    <!-- Устанавливает высоту изображения в пикселях -->
     <meta name="description" property="og:description" content="Our wild wedding in Italy" />
+    <!-- Описание страницы для социальных сетей и поисковиков -->
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Настраивает адаптивность, подстраивая страницу под размер экрана -->
     <meta content="jxxcVUbhHgWZDecGTCOx3kGxCtzgOh8bgWVPukcXpKU" name="google-site-verification">
+    <!-- Код для верификации сайта в Google -->
     <meta name="theme-color" content="#f6f2e9">
+    <!-- Устанавливает цвет темы для интерфейса браузера -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <!-- Устанавливает предварительное подключение к Google Fonts для ускорения загрузки -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- Подключает шрифт Cormorant Garamond с разными стилями -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Повторное предварительное подключение к Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <!-- Предварительное подключение с поддержкой кросс-доменных запросов -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Подключает шрифт Work Sans с разными стилями -->
     <link rel="stylesheet" href="style.css" media="all">
+    <!-- Подключает файл стилей CSS для всей страницы -->
     <script src="https://kit.fontawesome.com/3b059272ba.js" crossorigin="anonymous"></script>
-
+    <!-- Подключает иконки Font Awesome для использования в HTML -->
 </head>
-<div class="rsvp slide-in-blurred-br dur-350">
-    <a href="https://forms.office.com/" target="_blank">
-        <img src="assets/RSVP-2.png">
-    </a>
-</div>
 
 <body class="home">
+    <!-- Начало тела страницы, класс "home" указывает на главную страницу -->
+    <div class="rsvp slide-in-blurred-br dur-350">
+        <!-- Блок для кнопки RSVP с анимацией и длительностью 0.35 секунды -->
+        <a href="https://forms.office.com/" target="_blank">
+            <!-- Ссылка, открывающая форму RSVP в новом окне -->
+            <img src="assets/RSVP-2.png" alt="RSVP Button">
+            <!-- Изображение кнопки RSVP -->
+        </a>
+    </div>
+
     <section class="hero">
-        <img class="img-over img-top img-left slide-in-blurred-tl dur-250" src="assets/Foglie.png">
-        <img class="img-over img-top img-right slide-in-blurred-tr dur-350" src="assets/Fiori.png">
-        <img class="img-over img-bottom img-left slide-in-blurred-bl dur-3" src="assets/Scoppio.png">
-        <img class="img-over img-bottom img-right slide-in-blurred-br dur-2" src="assets/Uccello.png">
+        <!-- Начало секции "hero" - главного визуального блока -->
+        <img class="img-over img-top img-left slide-in-blurred-tl dur-250" src="assets/Foglie.png" alt="Decorative image">
+        <!-- Декоративное изображение слева сверху с анимацией и длительностью 0.25 секунды -->
+        <img class="img-over img-top img-right slide-in-blurred-tr dur-350" src="assets/Fiori.png" alt="Decorative image">
+        <!-- Декоративное изображение справа сверху с анимацией и длительностью 0.35 секунды -->
+        <img class="img-over img-bottom img-left slide-in-blurred-bl dur-3" src="assets/Scoppio.png" alt="Decorative image">
+        <!-- Декоративное изображение слева снизу с анимацией и длительностью 3 секунды -->
+        <img class="img-over img-bottom img-right slide-in-blurred-br dur-2" src="assets/Uccello.png" alt="Decorative image">
+        <!-- Декоративное изображение справа снизу с анимацией и длительностью 2 секунды -->
         <div class="focus-in dur-2">
+            <!-- Контейнер для текста с анимацией фокуса и длительностью 2 секунды -->
             <h1>
                 История любви, в которой вы — начало.
+                <!-- Главный заголовок секции -->
             </h1>
             <p class="date">
                 16 | 08 | 2025
+                <!-- Дата свадьбы -->
             </p>
         </div>
         <a href="#welcome" class="bounce arrow-bounce focus-in dur-4">
+            <!-- Ссылка для прокрутки к секции "welcome" с анимацией и длительностью 4 секунды -->
             <i class="fa fa-2x fa-chevron-down"></i>
+            <!-- Иконка стрелки вниз -->
         </a>
-			</section>
-		  <section id="welcome" class="standard">
-			<div class="bigtext">
-				<p>Всё началось не с нас. Оно началось с вас.</p>
-				<p>С ваших рук, которые держали нас, когда мы не умели ходить.<br />
-				   С ваших голосов, что шептали сказки на ночь и охраняли сны.</p>
-				<p>С вас — кто первым показал, что такое любовь.</p>
-				<p>Мы растём, но корни остаются.<br />
-				   Мы идём вперёд, но всегда оборачиваемся к вам.</p>
-				<p>Это дерево нашей жизни. И каждая его веточка — благодаря вам.</p>
-				<p>Спасибо за путь.<br />
-				   Спасибо за тепло.<br />
-				   Спасибо за нас.</p>
-			</div>
-		</section>
-		
-	 <!-- Новый блок выбора -->
-	<section id="choice" class="standard alt thin-choice slide-in-blurred-br dur-350">
-		<img class="img-remark remark-top" src="assets/Margherite.png">
-		<h2 class="choice-title">Продолжить с...</h2>
-		<div class="choice-buttons">
-			<button class="choice-btn">Дарья и её семья</button>
-			<button class="choice-btn">Егор и его семья</button>
-		</div>
-	</section>
-	
-<!-- Новый блок фотографий и текста -->
-<!-- Новый блок фотографий и текста -->
-	<section id="photo-story" class="timeline-section slide-in-blurred-br dur-350">
-		<h2 class="section-title">Как это произошло?</h2>
-		<div class="timeline">
-			<!-- Элемент 1 для невесты (Дарьи) -->
-			<div class="timeline-item left" data-section="bride">
-				<div class="timeline-content">
-					<img src="assets/Foglie.png" alt="Дарья с родителями" class="story-photo">
-					<h3 class="timeline-title">15 июня 2014 г.<br>Первая встреча</h3>
-					<p class="story-text">Мама и папа Дарьи познакомили нас на семейном празднике...</p>
-				</div>
-			</div>
-			<!-- Элемент 2 для невесты -->
-			<div class="timeline-item right" data-section="bride">
-				<div class="timeline-content">
-					<img src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\foto\floral-6752135_1280.webp" alt="Дарья с семьёй" class="story-photo">
-					<h3 class="timeline-title">20 августа 2015 г.<br>Семейный совет</h3>
-					<p class="story-text">Тёти и дяди поддержали нашу любовь своими историями...</p>
-				</div>
-			</div>
-			<!-- Элемент 1 для жениха (Егора) -->
-			<div class="timeline-item left" data-section="groom" style="display:none;">
-				<div class="timeline-content">
-					<img src="assets/Fiori.png" alt="Егор с родителями" class="story-photo">
-					<h3 class="timeline-title">15 июня 2014 г.<br>Первая встреча</h3>
-					<p class="story-text">Мама и папа Егора организовали встречу, где всё началось...</p>
-				</div>
-			</div>
-			<!-- Элемент 2 для жениха -->
-			<div class="timeline-item right" data-section="groom" style="display:none;">
-				<div class="timeline-content">
-					<img src="assets/Uccello.png" alt="Егор с семьёй" class="story-photo">
-					<h3 class="timeline-title">20 августа 2015 г.<br>Поддержка семьи</h3>
-					<p class="story-text">Тёти и дяди вдохновляли нас своими советами...</p>
-				</div>
-			</div>
+    </section>
+
+	<section id="welcome" class="standard">
+		<!-- Начало секции "welcome" с классом стандартного стиля -->
+		<div class="bigtext fade-in-text">
+			<!-- Контейнер для большого текста с классом для анимации -->
+			<p class="fade-in-paragraph">Всё началось не с нас. Оно началось с вас.</p>
+			<!-- Первый абзац текста -->
+			<p class="fade-in-paragraph">С ваших рук, которые держали нас, когда мы не умели ходить.<br />
+			   С ваших голосов, что шептали сказки на ночь и охраняли сны.</p>
+			<!-- Второй абзац с переносом строки -->
+			<p class="fade-in-paragraph">С вас — кто первым показал, что такое любовь.</p>
+			<!-- Третий абзац -->
+			<p class="fade-in-paragraph">Мы растём, но корни остаются.<br />
+			   Мы идём вперёд, но всегда оборачиваемся к вам.</p>
+			<!-- Четвёртый абзац с переносом строки -->
+			<p class="fade-in-paragraph">Это дерево нашей жизни. И каждая его веточка — благодаря вам.</p>
+			<!-- Пятый абзац -->
+			<p class="fade-in-paragraph">Спасибо за путь.<br />
+			   Спасибо за тепло.<br />
+			   Спасибо за нас.</p>
+			<!-- Шестой абзац с благодарностями -->
 		</div>
 	</section>
 
-	
-	
-	
-	
+    <!-- Блок выбора -->
+    <section id="choice" class="standard alt thin-choice slide-in-blurred-br dur-350">
+        <!-- Начало секции выбора с альтернативным стилем, анимацией и длительностью 0.35 секунды -->
+        <img class="img-remark remark-top" src="assets/Margherite.png" alt="Decorative image">
+        <!-- Декоративное изображение сверху -->
+        <h2 class="choice-title">Продолжить с...</h2>
+        <!-- Заголовок секции выбора -->
+        <div class="choice-buttons">
+            <!-- Контейнер для кнопок -->
+            <button class="choice-btn" onclick="showSection('bride')">Дарья и её семья</button>
+            <!-- Кнопка для показа секции невесты -->
+            <button class="choice-btn" onclick="showSection('groom')">Егор и его семья</button>
+            <!-- Кнопка для показа секции жениха -->
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <!-- Начало секции таймлайна -->
+        <h2 class="timeline-title">Как это произошло?</h2>
+        <!-- Заголовок секции таймлайна -->
+        <div class="timeline">
+            <!-- Контейнер для элементов таймлайна -->
+            <!-- Блок слева 1 -->
+            <div class="timeline-block left">
+                <!-- Блок таймлайна слева -->
+                <div class="timeline-img">
+                    <!-- Контейнер для изображения -->
+                    <img src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\foto\floral-6752135_1280.webp" alt="Событие 1">
+                    <!-- Изображение события -->
+                    <div class="frame-decoration"></div>
+                    <!-- Декоративная рамка -->
+                </div>
+                <div class="timeline-text">
+                    <!-- Контейнер для текста -->
+                    <p class="date">15 июня 2014 г.</p>
+                    <!-- Дата события -->
+                    <h3>Последняя семейная встреча</h3>
+                    <!-- Заголовок события -->
+                    <p>Мы впервые встретились на семейном мероприятии. Тогда наша семья решила, что мы идеально подходим друг другу. Поэтому они решили поженить нас как можно скорее.</p>
+                    <!-- Описание события -->
+                </div>
+            </div>
+
+            <!-- Блок справа 1 -->
+            <div class="timeline-block right">
+                <!-- Блок таймлайна справа -->
+                <div class="timeline-img">
+                    <!-- Контейнер для изображения -->
+                    <img src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\foto\floral-6752135_1280.webp" alt="Событие 2">
+                    <!-- Изображение события -->
+                    <div class="frame-decoration"></div>
+                    <!-- Декоративная рамка -->
+                </div>
+                <div class="timeline-text">
+                    <!-- Контейнер для текста -->
+                    <p class="date">15 июня 2014 г.</p>
+                    <!-- Дата события -->
+                    <h3>День нашей помолвки</h3>
+                    <!-- Заголовок события -->
+                    <p>Мы впервые встретились на семейном мероприятии. Тогда наша семья решила, что мы идеально подходим друг другу. Поэтому они решили поженить нас как можно скорее.</p>
+                    <!-- Описание события -->
+                </div>
+            </div>
+
+            <!-- Блок слева 2 -->
+            <div class="timeline-block left">
+                <!-- Блок таймлайна слева -->
+                <div class="timeline-img">
+                    <!-- Контейнер для изображения -->
+                    <img src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\foto\floral-6752135_1280.webp" alt="Событие 3">
+                    <!-- Изображение события -->
+                    <div class="frame-decoration"></div>
+                    <!-- Декоративная рамка -->
+                </div>
+                <div class="timeline-text">
+                    <!-- Контейнер для текста -->
+                    <p class="date">20 августа 2015 г.</p>
+                    <!-- Дата события -->
+                    <h3>Семейный совет</h3>
+                    <!-- Заголовок события -->
+                    <p>Тёти и дяди поддержали нашу любовь своими историями и советами.</p>
+                    <!-- Описание события -->
+                </div>
+            </div>
+
+            <!-- Блок справа 2 -->
+            <div class="timeline-block right">
+                <!-- Блок таймлайна справа -->
+                <div class="timeline-img">
+                    <!-- Контейнер для изображения -->
+                    <img src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\foto\floral-6752135_1280.webp" alt="Событие 4">
+                    <!-- Изображение события -->
+                    <div class="frame-decoration"></div>
+                    <!-- Декоративная рамка -->
+                </div>
+                <div class="timeline-text">
+                    <!-- Контейнер для текста -->
+                    <p class="date">20 августа 2015 г.</p>
+                    <!-- Дата события -->
+                    <h3>Поддержка семьи</h3>
+                    <!-- Заголовок события -->
+                    <p>Семья Егора вдохновляла нас на пути к свадьбе.</p>
+                    <!-- Описание события -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="standard alt video">
-        <img class="img-over img-top img-left" src="assets/Foglie-Video-01.png">
-        <img class="img-over img-top img-right" src="assets/Foglie-Video-03.png">
-        <img class="img-over img-bottom img-left" src="assets/Foglie-Video-04.png">
-        <img class="img-over img-bottom img-right" src="assets/Foglie-Video-02.png">
+        <!-- Начало секции видео с альтернативным стилем -->
+        <img class="img-over img-top img-left" src="assets/Foglie-Video-01.png" alt="Decorative image">
+        <!-- Декоративное изображение слева сверху -->
+        <img class="img-over img-top img-right" src="assets/Foglie-Video-03.png" alt="Decorative image">
+        <!-- Декоративное изображение справа сверху -->
+        <img class="img-over img-bottom img-left" src="assets/Foglie-Video-04.png" alt="Decorative image">
+        <!-- Декоративное изображение слева снизу -->
+        <img class="img-over img-bottom img-right" src="assets/Foglie-Video-02.png" alt="Decorative image">
+        <!-- Декоративное изображение справа снизу -->
         <p class="bigtext">
             The road to get to the <span class="daje">cascina</span> is a bit funky so be prepared.
+            <!-- Текст с предупреждением и выделенным словом -->
         </p>
-        <iframe width="" height=""
+        <iframe width="1100" height="620"
             src="https://www.youtube.com/embed/PyQQJWmV1LE?si=vIZQzgKdefT_fqXj?controls=0&showinfo=0&rel=0&autoplay=0&loop=1&mute=1"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+        <!-- Встроенное видео с YouTube с настройками: без управления, без информации, без рекомендаций, без автозапуска, с цикличностью и без звука -->
     </section>
- 
-    <section class="standard alt" style="display:none">
-        <div>
-            <img class="img-remark remark-top" src="assets/Margherite.png">
-            <p class="hugetext">
-                We hope you’ll join us on this special day.
-            </p>
-            <a href="google.com" target="_blank" class="button">
-                RSVP
-            </a>
-        </div>
-    </section>    
+
     <section class="standard alt">
+        <!-- Начало секции с приглашением -->
         <div>
-            <img class="img-remark remark-top" src="assets/Margherite.png">
+            <!-- Контейнер для контента -->
+            <img class="img-remark remark-top" src="assets/Margherite.png" alt="Decorative image">
+            <!-- Декоративное изображение сверху -->
             <p class="hugetext">
                 We hope you’ll join us on this special day. <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAa8nI3dUN0tCVUtMUzBRQjVTMkUwU0dXU1oyVkFGRS4u" target="_blank" class="daje">Let us know</a>.
+                <!-- Большой текст с приглашением и ссылкой -->
             </p>
             <div class="divider bottom"></div>
+            <!-- Декоративная линия снизу -->
             <p class="subtext">
-Please, fill in the form before April 30, 2022.</p>
+                Please, fill in the form before April 30, 2022.
+                <!-- Подсказка о дедлайне -->
+            </p>
         </div>
     </section>
-<section class="standard gift">
-    <img class="img-over img-bottom img-left" src="assets/Scoppio.png">
-    <img class="img-over img-bottom img-right" src="assets/Uccello.png">
-    <p class="bigtext">
-        Your presence is <span class="daje">the most important gift</span> but if you wish you can contribute to our <a href="honeymoon.html">honeymoon</a>.
-    </p>
-    </section>
-function showSection(section) {
-    const items = document.querySelectorAll('.timeline-item');
-    items.forEach(item => {
-        if (item.getAttribute('data-section') === section) {
-            item.style.display = 'flex';
-            item.classList.add('active');
-        } else {
-            item.style.display = 'none';
-            item.classList.remove('active');
-        }
-    });
-}
 
-// Показываем контент невесты по умолчанию
-window.onload = function() {
-    showSection('bride');
-};
+    <section class="standard gift">
+        <!-- Начало секции подарков -->
+        <img class="img-over img-bottom img-left" src="assets/Scoppio.png" alt="Decorative image">
+        <!-- Декоративное изображение слева снизу -->
+        <img class="img-over img-bottom img-right" src="assets/Uccello.png" alt="Decorative image">
+        <!-- Декоративное изображение справа снизу -->
+        <p class="bigtext">
+            Your presence is <span class="daje">the most important gift</span> but if you wish you can contribute to our <a href="honeymoon.html">honeymoon</a>.
+            <!-- Текст о подарках с акцентом и ссылкой на медовый месяц -->
+        </p>
+    </section>
+
+	<script>
+		// Функция для запуска анимации при прокрутке до секции
+		function animateOnScroll() {
+			const welcomeSection = document.getElementById('welcome');
+			const paragraphs = welcomeSection.querySelectorAll('.fade-in-paragraph');
+
+			// Наблюдатель за видимостью элемента
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						// Когда секция становится видимой, добавляем класс для запуска анимации
+						paragraphs.forEach((paragraph, index) => {
+							setTimeout(() => {
+								paragraph.classList.add('active');
+							}, index * 3000); // Задержка 1 секунда между абзацами
+						});
+						observer.unobserve(entry.target); // Останавливаем наблюдение после первого появления
+					}
+				});
+			}, { threshold: 0.5 }); // Анимация начинается, когда 50% секции видно
+
+			observer.observe(welcomeSection);
+		}
+
+		// Запускаем функцию при загрузке страницы
+		window.addEventListener('load', animateOnScroll);
+	</script>
+
 </body>
 
-function showSection(section) {
-    const items = document.querySelectorAll('.timeline-item');
-    items.forEach(item => {
-        if (item.getAttribute('data-section') === section) {
-            item.style.display = 'flex';
-            item.classList.add('active');
-        } else {
-            item.style.display = 'none';
-            item.classList.remove('active');
-        }
-    });
-}
-
-// Показываем контент невесты по умолчанию
-window.onload = function() {
-    showSection('bride');
-};
-
 </html>
-
-function showSection(section) {
-    const items = document.querySelectorAll('.timeline-item');
-    items.forEach(item => {
-        if (item.getAttribute('data-section') === section) {
-            item.style.display = 'flex';
-            item.classList.add('active');
-        } else {
-            item.style.display = 'none';
-            item.classList.remove('active');
-        }
-    });
-}
-
-// Показываем контент невесты по умолчанию
-window.onload = function() {
-    showSection('bride');
-};
+<!-- Конец HTML-документа -->
