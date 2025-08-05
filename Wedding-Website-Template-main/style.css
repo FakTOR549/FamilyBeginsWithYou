@@ -1352,80 +1352,139 @@ a[href^="tel"] { /* Ссылки, начинающиеся с "tel" (телеф�
 /* Пустые строки (оставлены для структуры, ничего не делают) */
 
 
+
+
+
+
+
+
 /* Стили для блока с выбором */
-/*блок 3*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.thin-choice {
-    padding: 1rem; /* Внутренние отступы 1rem */
-    text-align: center; /* Центрирует текст */
-    min-height: 100vh; /* Минимальная высота равна высоте экрана */
-    z-index: 12; /* Устанавливает уровень наложения */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    justify-content: center; /* Центрирует содержимое по вертикали */
+/* Блок 3 */
+
+
+/* Стили для секции выбора */
+#choice {
+    background-color: var(--beige);
+    padding: 2rem;
+    z-index: 12;
+    position: relative;
+    text-align: center;
 }
 
 /* Стили для заголовка выбора */
 .choice-title {
-    font-family: 'Cormorant Garamond', serif; /* Шрифт */
-    font-size: 3rem; /* Размер шрифта */
-    color: var(--text); /* Цвет текста из переменной */
-    margin-bottom: 1rem; /* Отступ снизу */
-    font-weight: 500; /* Средняя толщина шрифта */
-    padding-top: 1rem; /* Отступ сверху */
+    font-family: 'Amalfi-Coast', serif;
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: 2rem;
+    line-height: 1.05em;
+    letter-spacing: 0.5px;
 }
 
 /* Стили для контейнера кнопок */
 .choice-buttons {
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Кнопки в колонку */
-    gap: 0.5rem; /* Расстояние между кнопками */
-    width: 80%; /* Ширина 80% */
-    margin: 0 auto; /* Центрирует с автоматическими отступами */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* Стили для кнопок выбора */
 .choice-btn {
-    font-family: 'Work Sans', sans-serif; /* Шрифт */
-    font-size: 2rem; /* Размер шрифта */
-    padding: 0.75rem 1.5rem; /* Внутренние отступы */
-    background-color: var(--light-green); /* Светло-зеленый фон */
-    color: white; /* Белый цвет текста */
-    border: none; /* Убирает границы */
-    border-radius: 25px; /* Закругленные углы */
-    cursor: pointer; /* Изменяет курсор на "руку" */
-    transition: all 0.3s ease-in-out; /* Плавное изменение стилей */
-    box-shadow: var(--shadow-1-elevation-medium); /* Средняя тень */
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    box-shadow: var(--shadow-1-elevation-medium);
 }
 
-/* Эффект при наведении на кнопку */
 .choice-btn:hover {
-    background-color: var(--green); /* Меняем фон на темный зеленый */
-    transform: scale(1.05); /* Увеличиваем кнопку на 5% */
-    box-shadow: var(--shadow-1-elevation-high); /* Увеличиваем тень */
+    background-color: var(--red);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-1-elevation-high);
 }
 
-/* Стили для верхнего декоративного изображения */
-.img-remark.remark-top {
-    width: 40vw; /* Ширина 40% от ширины окна */
-    margin-bottom: 1rem; /* Отступ снизу */
-    position: relative; /* Относительное позиционирование */
-    z-index: 1; /* Устанавливает уровень наложения */
+/* Стили для декоративного изображения */
+.img-remark {
+    display: block;
+    max-width: 40vw;
+    margin: 0 auto 2rem auto;
+}
+
+/* Адаптивность для экранов до 992px */
+@media (max-width: 992px) {
+    .choice-title {
+        font-size: 2.5rem;
+    }
+    .choice-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .img-remark {
+        max-width: 50vw;
+    }
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+    .choice-title {
+        font-size: 2rem;
+    }
+    .choice-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .img-remark {
+        max-width: 60vw;
+    }
 }
 
 /* Адаптивность для экранов до 576px */
 @media (max-width: 576px) {
-    .choice-title { /* Заголовок выбора */
-        font-size: 1.2rem; /* Уменьшает размер шрифта */
+    #choice {
+        padding: 1rem;
     }
-    .choice-btn { /* Кнопки выбора */
-        font-size: 1rem; /* Уменьшает размер шрифта */
-        padding: 0.5rem 1rem; /* Уменьшает внутренние отступы */
+    .choice-title {
+        font-size: 1.5rem;
     }
-    .img-remark.remark-top { /* Верхнее изображение */
-        width: 50vw; /* Увеличивает ширину до 50% */
+    .choice-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .choice-buttons {
+        flex-direction: column;
+    }
+    .img-remark {
+        max-width: 80vw;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Стили для секции с фотографиями */
 .photo-section {
