@@ -1,685 +1,680 @@
-/* Определяет переменные цветов и теней для использования по всему стилю */
 :root {
-    --green: #5B7343; /* Основной зеленый цвет */
-    --light-green: #B1BF93; /* Светлый зеленый цвет */
-    --yellow: #D6D989; /* Желтый цвет */
-    --yellow-down: #fbfdba; /* Светло-желтый оттенок */
-    --beige: #f6f2e9; /* Бежевый фон */
-    --red: #A66565; /* Красный цвет для акцентов */
-    --text: #5B7343; /* Цвет текста по умолчанию */
-    --shadow-color: 79deg 26% 66%; /* Базовый цвет тени в HSL */
-    --shadow-1-elevation-low: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34), 0px 0.4px 0.5px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -2.5px hsl(var(--shadow-color) / 0.34); /* Низкая тень первого типа */
-    --shadow-1-elevation-medium: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.36), 0px 0.7px 0.8px -0.8px hsl(var(--shadow-color) / 0.36), 0px 1.8px 2px -1.7px hsl(var(--shadow-color) / 0.36), 0.1px 4.5px 5.1px -2.5px hsl(var(--shadow-color) / 0.36); /* Средняя тень первого типа */
-    --shadow-1-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34), 0px 1.3px 1.5px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 2.4px 2.7px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 4px 4.5px -1.1px hsl(var(--shadow-color) / 0.34), 0.1px 6.4px 7.2px -1.4px hsl(var(--shadow-color) / 0.34), 0.2px 10px 11.3px -1.8px hsl(var(--shadow-color) / 0.34), 0.3px 15.1px 17px -2.1px hsl(var(--shadow-color) / 0.34), 0.5px 22.3px 25.1px -2.5px hsl(var(--shadow-color) / 0.34); /* Высокая тень первого типа */
-    --shadow-color-2: 62deg 51% 69%; /* Второй цвет тени в HSL */
-    --shadow-2-elevation-low: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.34), 0px 0.4px 0.5px -1.2px hsl(var(--shadow-color-2) / 0.34), 0px 0.9px 1px -2.5px hsl(var(--shadow-color-2) / 0.34); /* Низкая тень второго типа */
-    --shadow-2-elevation-medium: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.36), 0px 0.7px 0.8px -0.8px hsl(var(--shadow-color-2) / 0.36), 0px 1.8px 2px -1.7px hsl(var(--shadow-color-2) / 0.36), 0.1px 4.5px 5.1px -2.5px hsl(var(--shadow-color-2) / 0.36); /* Средняя тень второго типа */
-    --shadow-2-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.34), 0px 1.3px 1.5px -0.4px hsl(var(--shadow-color-2) / 0.34), 0.1px 2.4px 2.7px -0.7px hsl(var(--shadow-color-2) / 0.34), 0.1px 4px 4.5px -1.1px hsl(var(--shadow-color-2) / 0.34), 0.1px 6.4px 7.2px -1.4px hsl(var(--shadow-color-2) / 0.34), 0.2px 10px 11.3px -1.8px hsl(var(--shadow-color-2) / 0.34), 0.3px 15.1px 17px -2.1px hsl(var(--shadow-color-2) / 0.34), 0.5px 22.3px 25.1px -2.5px hsl(var(--shadow-color-2) / 0.34); /* Высокая тень второго типа */
+    --green: #5B7343;
+    --light-green: #B1BF93;
+    --yellow: #D6D989;
+    --yellow-down:#fbfdba;
+    --beige: #f6f2e9;
+    --red: #A66565;
+    --text: #5B7343;
+    --shadow-color: 79deg 26% 66%;
+    --shadow-1-elevation-low: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34), 0px 0.4px 0.5px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-1-elevation-medium: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.36), 0px 0.7px 0.8px -0.8px hsl(var(--shadow-color) / 0.36), 0px 1.8px 2px -1.7px hsl(var(--shadow-color) / 0.36), 0.1px 4.5px 5.1px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-1-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34), 0px 1.3px 1.5px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 2.4px 2.7px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 4px 4.5px -1.1px hsl(var(--shadow-color) / 0.34), 0.1px 6.4px 7.2px -1.4px hsl(var(--shadow-color) / 0.34), 0.2px 10px 11.3px -1.8px hsl(var(--shadow-color) / 0.34), 0.3px 15.1px 17px -2.1px hsl(var(--shadow-color) / 0.34), 0.5px 22.3px 25.1px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-color-2: 62deg 51% 69%;
+    --shadow-2-elevation-low: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.34), 0px 0.4px 0.5px -1.2px hsl(var(--shadow-color-2) / 0.34), 0px 0.9px 1px -2.5px hsl(var(--shadow-color-2) / 0.34);
+    --shadow-2-elevation-medium: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.36), 0px 0.7px 0.8px -0.8px hsl(var(--shadow-color-2) / 0.36), 0px 1.8px 2px -1.7px hsl(var(--shadow-color-2) / 0.36), 0.1px 4.5px 5.1px -2.5px hsl(var(--shadow-color-2) / 0.36);
+    --shadow-2-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.34), 0px 1.3px 1.5px -0.4px hsl(var(--shadow-color-2) / 0.34), 0.1px 2.4px 2.7px -0.7px hsl(var(--shadow-color-2) / 0.34), 0.1px 4px 4.5px -1.1px hsl(var(--shadow-color-2) / 0.34), 0.1px 6.4px 7.2px -1.4px hsl(var(--shadow-color-2) / 0.34), 0.2px 10px 11.3px -1.8px hsl(var(--shadow-color-2) / 0.34), 0.3px 15.1px 17px -2.1px hsl(var(--shadow-color-2) / 0.34), 0.5px 22.3px 25.1px -2.5px hsl(var(--shadow-color-2) / 0.34);
 }
 
-/* Определяет пользовательский шрифт для сайта */
 @font-face {
-    font-family: 'Amalfi-Coast'; /* Название шрифта */
-    src: url('assets/fonts/Amalfi-Coast.ttf.woff') format('woff'), /* Поддержка формата woff */
-         url('assets/fonts/Amalfi-Coast.ttf.svg#Amalfi-Coast') format('svg'), /* Поддержка формата svg */
-         url('assets/fonts/Amalfi-Coast.ttf.eot'), /* Поддержка формата eot */
-         url('assets/fonts/Amalfi-Coast.ttf.eot?#iefix') format('embedded-opentype'); /* Поддержка eot для старых IE */
-    font-weight: normal; /* Нормальная толщина шрифта */
-    font-style: normal; /* Нормальный стиль шрифта */
+    font-family: 'Amalfi-Coast';
+    src: url('assets/fonts/Amalfi-Coast.ttf.woff') format('woff'),
+        url('assets/fonts/Amalfi-Coast.ttf.svg#Amalfi-Coast') format('svg'),
+        url('assets/fonts/Amalfi-Coast.ttf.eot'),
+        url('assets/fonts/Amalfi-Coast.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Общие настройки для HTML */
+
 html {
-    scroll-behavior: smooth; /* Плавная прокрутка страницы */
-    font-size: 16px; /* Базовый размер шрифта */
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
-/* Сброс стандартных отступов для body */
 body {
-    margin: 0px; /* Удаляет внешние отступы */
+    margin: 0px;
 }
 
-/* Центрирование контента для секций и дивов */
+/* Makes sure everything is centered. Always. */
 section,
 div {
-    display: flex; /* Использует flexbox для компоновки */
-    flex-direction: column; /* Вертикальное расположение элементов */
-    align-items: center; /* Центрирует элементы по горизонтали */
-    justify-content: center; /* Центрирует элементы по вертикали */
-    text-align: center; /* Центрирует текст */
-    position: relative; /* Относительное позиционирование */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
-/* Настройки высоты секций */
+/* Sets minimum height for the sections, so they look better  */
 section {
-    overflow: hidden; /* Скрывает лишний контент за пределами секции */
-    min-height: 90vh; /* Минимальная высота 90% от высоты экрана */
+    overflow: hidden;
+    min-height: 90vh;
 }
 
-/* Базовые настройки шрифтов */
+/* Basic font settings  */
 h1,
 h2,
 h3,
 p {
-    font-family: 'Cormorant Garamond', serif; /* Шрифт по умолчанию */
-    color: var(--text); /* Цвет текста из переменной */
-    font-weight: 400; /* Нормальная толщина шрифта */
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text);
+    font-weight: 400;
 }
 
-/* Стили для ссылок в заголовках */
 h1 a,
 h1 a:visited {
-    color: var(--text); /* Цвет текста для ссылок */
-    display: inline-block; /* Отображение как блочный элемент */
-    transition: all 0.75s ease-in-out; /* Плавный переход всех свойств */
+    color: var(--text);
+    display: inline-block;
+    transition:all 0.75s ease-in-out;
 }
 h1 a:hover {
-    color: var(--red); /* Изменение цвета при наведении */
+    color: var(--red);
 }
 
-/* Стили для секции hero */
+/* Settings for the first row of every page */
 section.hero {
-    background-color: var(--beige); /* Фоновый цвет */
-    height: 100vh; /* Полная высота экрана */
-}
-.bigtext {
-    font-size: 3rem; /* Размер шрифта */
-    line-height: 1; /* Высота строки */
-    max-width: 800px; /* Максимальная ширина текста */
-    margin: 0 auto; /* Центрирование с автоматическими отступами */
-    text-align: center; /* Центрирование текста */
-    font-family: 'Georgia', serif; /* Шрифт */
-    color: var(--text); /* Цвет текста */
+    background-color: var(--beige);
+    height: 100vh;
 }
 
-.bigtext p {
-    margin-bottom: 1.2rem; /* Отступ снизу для абзацев */
-}
-/* Стили для стандартных секций */
+/* Non-hero sections */
 section.standard {
-    padding: 2rem; /* Внутренние отступы */
-    z-index: 12; /* Уровень наложения */
-    background-color: white; /* Фоновый цвет */
+    padding: 12rem;
+    z-index: 2;
+    background-color: white;
 }
 
-/* Стили для изображений, наложенных сверху */
+/* All images that need to stay on top of other elements  */
 .img-over {
-    display: block; /* Отображение как блочный элемент */
-    position: absolute; /* Абсолютное позиционирование */
-    pointer-events: none; /* Отключение взаимодействия с мышью */
+    display: block;
+    position: absolute;
+    pointer-events: none;
 }
 
-/* Стили для изображений в секции hero */
+/* Images in the hero that need to stay below other rows when scrolling */
 section.hero .img-over {
-    /* position: fixed; */ /* Закомментировано для относительного позиционирования */
-    z-index: 1; /* Уровень наложения */
+    /* position: fixed; */
+    z-index: 1;
 }
 
-/* Позиционирование изображений */
+/* Stick images to specific positions */
 .img-top {
-    top: 0%; /* Верхняя граница */
+    top: 0%;
 }
 
 .img-bottom {
-    bottom: 0%; /* Нижняя граница */
+    bottom: 0%
 }
 
 .img-right {
-    right: 0%; /* Правая граница */
+    right: 0%;
 }
 
 .img-left {
-    left: 0%; /* Левая граница */
+    left: 0%;
 }
 
-/* Стили для главной страницы */
+/***
+HOME
+***/
+
+/* Font settings for the main title */
 .home h1 {
-    font-family: 'Amalfi-Coast'; /* Шрифт заголовка */
-    text-align: center; /* Центрирование текста */
-    line-height: 1.05em; /* Высота строки */
-    font-size: 5rem; /* Размер шрифта */
-    letter-spacing: .5px; /* Интервал между буквами */
-    color: var(--green); /* Цвет текста */
+    font-family: 'Amalfi-Coast';
+    text-align: center;
+    line-height: 1.05em;
+    font-size: 5rem;
+    letter-spacing: .5px;
+    color: var(--green);
 }
 
-/* Высота изображений в секции hero */
+/* Set height for images on the hero section */
 .home .hero .img-top.img-left {
-    height: 45vh; /* Высота 45% от viewport */
+    height: 45vh;
 }
 
 .home .hero .img-top.img-right {
-    height: 45vh; /* Высота 45% от viewport */
+    height: 45vh;
 }
 
 .home .hero .img-bottom.img-left {
-    height: 60vh; /* Высота 60% от viewport */
+    height: 60vh;
 }
 
 .home .hero .img-bottom.img-right {
-    height: 60vh; /* Высота 60% от viewport */
+    height: 60vh;
 }
 
-/* Стили для даты под заголовком */
+/* Sets the wedding date below the h1 */
 .home .date {
-    color: var(--green); /* Цвет текста */
-    font-size: 2.2rem; /* Размер шрифта */
-    margin-top: 2rem; /* Отступ сверху */
+    color: var(--green);
+    font-size: 2.2rem;
+    margin-top: 2rem;
 }
 
-/* Стили для кнопки RSVP */
-.rsvp {
-    position: fixed; /* Фиксированное позиционирование */
-    bottom: 2rem; /* Отступ снизу */
-    right: 2rem; /* Отступ справа */
-    z-index: 4; /* Уровень наложения */
-}
+/***
+RSVP Button
+***/
 
-/* Стили изображения кнопки RSVP */
-.rsvp a img {
-    height: 80px; /* Высота изображения */
-    transition: all 0.8s ease-in-out; /* Плавный переход свойств */
-    box-shadow: var(--shadow-2-elevation-medium); /* Тень среднего уровня */
-    border-radius: 100px; /* Закругление углов */
-}
 
-/* Эффект при наведении на кнопку RSVP */
-.rsvp a:hover img {
-    transform: scale(1.1); /* Увеличение изображения */
-    box-shadow: var(--shadow-2-elevation-high); /* Тень высокого уровня */
-}
-
-/* Стили для бокса */
 div.box {
-    /* background-color: var(--beige); */ /* Закомментированный фон */
-    padding: 6rem; /* Внутренние отступы */
+    /* background-color: var(--beige); */
+    padding: 6rem;
 }
 
-h1,
-p.bigtext {
-    font-size: 4rem; /* Размер шрифта */
-    /* line-height: 1.2rem; */ /* Закомментированная высота строки */
-    padding: 0px; /* Удаление внутренних отступов */
-    margin: 0px; /* Удаление внешних отступов */
+/* Основной контейнер блока */
+#welcome.section {
+    min-height: 100vh; /* Высота блока = вся высота экрана */
+    display: flex; /* Чтобы выровнять текст */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    padding: 2rem; /* Отступы по краям */
+
+    text-align: center; /* Центрируем текст */
+}
+
+/* Большой контейнер текста */
+.bigtext {
+    max-width: 1000px; /* Чтобы текст не растягивался на широких экранах слишком сильно */
+    width: 100%;
+}
+
+/* Общий стиль абзацев */
+.bigtext p {
+    font-size: clamp(1.2rem, 2.5vw, 2.2rem); 
+    /* clamp(минимум, адаптив, максимум):
+       - минимум 1.2rem на маленьких экранах
+       - 2.5vw — адаптив от ширины экрана
+       - максимум 2.2rem на больших экранах */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Анимация появления */
+.fade-in-paragraph {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-in-paragraph:nth-child(1) { animation-delay: 0.2s; }
+.fade-in-paragraph:nth-child(2) { animation-delay: 0.4s; }
+.fade-in-paragraph:nth-child(3) { animation-delay: 0.6s; }
+.fade-in-paragraph:nth-child(4) { animation-delay: 0.8s; }
+.fade-in-paragraph:nth-child(5) { animation-delay: 1s; }
+.fade-in-paragraph:nth-child(6) { animation-delay: 1.2s; }
+
+/* Ключи для анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Мобильная оптимизация */
+@media (max-width: 768px) {
+    .bigtext p {
+        font-size: clamp(1rem, 4vw, 1.6rem);
+    }
 }
 
 p.hugetext {
-    font-size: 5rem; /* Размер шрифта */
-    padding: 0px; /* Удаление внутренних отступов */
-    margin: 0px; /* Удаление внешних отступов */
+    font-size: 5rem;
+    padding: 0px;
+    margin: 0px;
 }
 
 .daje {
-    font-weight: bolder; /* Жирный шрифт */
-    font-style: italic; /* Курсив */
+    font-weight: bolder;
+    font-style: italic;
 }
 
 div.divider {
-    width: 25%; /* Ширина разделителя */
-    border-bottom: solid 1.5px var(--green); /* Нижняя граница */
+    width: 25%;
+    border-bottom: solid 1.5px var(--green);
 }
 
 div.divider.top {
-    margin-bottom: 5rem; /* Отступ снизу */
-    margin-top: 2rem; /* Отступ сверху */
+    margin-bottom: 5rem;
+    margin-top: 2rem;
 }
 
 div.divider.bottom {
-    margin-bottom: 2rem; /* Отступ снизу */
-    margin-top: 5rem; /* Отступ сверху */
+    margin-bottom: 2rem;
+    margin-top: 5rem;
 }
 
+
 p.subtext {
-    font-size: 1.5rem; /* Размер шрифта */
-    margin: 0px; /* Удаление внешних отступов */
+    font-size: 1.5rem;
+    margin: 0px;
 }
 
 a:visited {
-    color: var(--text); /* Цвет посещенных ссылок */
+    color: var(--text);
 }
 
-/* Стили для ссылок в параграфах с классом details и в колонках */
 p.details a,
-p.details a:visited, /* Стиль для уже посещенных ссылок в details */
-p.details a:any-link, /* Стиль для всех ссылок в details */
-.column a, /* Стиль для ссылок в колонках */
-.column a:visited, /* Стиль для посещенных ссылок в колонках */
-.column a:any-link { /* Стиль для всех ссылок в колонках */
-    font-size: 1rem; /* Размер шрифта для ссылок */
-    font-family: 'Work Sans', sans-serif; /* Шрифт для ссылок */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    border-bottom: solid 1px var(--light-green); /* Добавляет тонкую зеленую линию под ссылкой */
-    color: var(--light-green); /* Цвет ссылок */
-    transition: all 1s ease-in-out; /* Плавное изменение стилей при наведении */
+p.details a:visited,
+p.details a:any-link,
+.column a,
+.column a:visited,
+.column a:any-link {
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    border-bottom: solid 1px var(--light-green);
+    color: var(--light-green);
+    transition: all 1s ease-in-out;
 }
 
-p.details a:hover, /* Стиль при наведении на ссылки в details */
-.column a:hover { /* Стиль при наведении на ссылки в колонках */
-    color: var(--red); /* Меняет цвет ссылок на красный при наведении */
+p.details a:hover,
+.column a:hover {
+    color: var(--red);
 }
 
-/* Стили для секций с классом alt */
 section.alt {
-    background-color: var(--beige); /* Устанавливает бежевый фон */
-    padding: 12rem 10em; /* Добавляет большие внутренние отступы сверху/снизу и слева/справа */
+    background-color: var(--beige);
+    padding: 12rem 10em;
 }
 
-/* Стили для iframe в секции видео */
 .video iframe {
-    margin-top: 3rem; /* Отступ сверху перед видео */
-    width: 90%; /* Ширина видео 90% от родителя */
-    box-shadow: var(--shadow-1-elevation-high); /* Добавляет высокую тень вокруг видео */
-    width: 1100px; /* Фиксированная ширина видео (переопределяет 90%) */
-    height: 620px; /* Фиксированная высота видео */
+    margin-top: 3rem;
+    width: 90%;
+    box-shadow: var(--shadow-1-elevation-high);
+    width: 1100px;
+    height: 620px;
 }
 
-/* Закомментированный стиль для текста в секции видео */
+
 /* section.video p.bigtext {
-    line-height: .95em; /* Устанавливает высоту строки текста (закомментировано)
+    line-height: .95em;
 } */
 
 section.video {
-    position: relative; /* Устанавливает относительное позиционирование для секции видео */
+    position: relative;
 }
 
 section.video img.img-top.img-left {
-    height: 80vh; /* Высота левого верхнего изображения 80% от высоты экрана */
+    height: 80vh;
 }
 
 section.video img.img-top.img-right {
-    height: 100vh; /* Высота правого верхнего изображения 100% от высоты экрана */
+    height: 100vh;
 }
 
 section.video img.img-bottom.img-left {
-    height: 60vh; /* Высота левого нижнего изображения 60% от высоты экрана */
+    height: 60vh;
 }
 
 section.video img.img-bottom.img-right {
-    height: 40vh; /* Высота правого нижнего изображения 40% от высоты экрана */
+    height: 40vh;
 }
 
-p.bigtext a, /* Стили для ссылок в тексте с классом bigtext */
-p.hugetext a { /* Стили для ссылок в тексте с классом hugetext */
-    font-weight: bolder; /* Делает шрифт жирным */
-    font-style: italic; /* Делает шрифт курсивным */
-    display: inline-block; /* Отображает ссылки как блочные элементы */
-    position: relative; /* Относительное позиционирование для ссылок */
-    color: var(--text); /* Цвет ссылок */
-    text-decoration: underline; /* Добавляет подчеркивание под ссылками */
-    /* padding: 0.2em 0.05em; */ /* Внутренние отступы (закомментировано) */
-    transition: all .5s ease-in-out; /* Плавное изменение стилей */
+p.bigtext a,
+p.hugetext a
+ {
+    font-weight: bolder;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    color: var(--text);
+    text-decoration: underline;
+    /* padding: 0.2em 0.05em; */
+    transition: all .5s ease-in-out;
 }
 
-p.subtext a { /* Стили для ссылок в тексте с классом subtext */
-    color: var(--text); /* Цвет ссылок */
-    font-weight: bolder; /* Делает шрифт жирным */
-    font-style: italic; /* Делает шрифт курсивным */
+p.subtext a {
+    color: var(--text);
+    font-weight: bolder;
+    font-style: italic;
 }
 
-p.bigtext a:hover, /* Стиль при наведении на ссылки в bigtext */
-p.hugetext a:hover, /* Стиль при наведении на ссылки в hugetext */
-p.subtext a:hover { /* Стиль при наведении на ссылки в subtext */
-    color: var(--red); /* Меняет цвет на красный при наведении */
+p.bigtext a:hover,
+p.hugetext a:hover,
+p.subtext a:hover {
+    color: var(--red);
 }
 
-/* Закомментированные стили для эффекта подчеркивания ссылок */
-/* p.bigtext a:after {
-    content: ''; /* Создает пустой элемент после ссылки */
-    display: block; /* Отображает элемент как блок */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0; /* Верхняя граница элемента */
-    right: 100%; /* Правая граница элемента */
-    bottom: 0; /* Нижняя граница элемента */
-    left: 0; /* Левая граница элемента */
-    background: var(--light-green); /* Зеленый фон */
-    z-index: -1; /* Помещает элемент под текст */
-    transform: scaleY(.2); /* Уменьшает высоту фона */
-    border-radius: 0; /* Убирает закругление */
-    transition: all 0.3s ease-in-out; /* Плавное изменение
-  }
-  
-  p.bigtext a:hover:after {
-    content: ''; /* Создает пустой элемент после ссылки */
-    display: block; /* Отображает элемент как блок */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0; /* Верхняя граница элемента */
-    right: 0; /* Правая граница элемента */
-    bottom: 0; /* Нижняя граница элемента */
-    left: 0; /* Левая граница элемента */
-    background: var(--light-green); /* Зеленый фон */
-    z-index: -1; /* Помещает элемент под текст */
-    border-radius: 8px; /* Добавляет закругление */
-  } */
 
-img.img-remark { /* Стили для изображений с классом img-remark */
-    width: 40vw; /* Ширина изображения 40% от ширины окна */
+img.img-remark {
+    width: 40vw;
 }
 
-img.remark-top { /* Стили для изображений с классом remark-top */
-    margin-bottom: 5rem; /* Отступ снизу 5rem */
+img.remark-top {
+    margin-bottom: 5rem;
 }
 
-a.button { /* Стили для ссылок с классом button */
-    font-family: 'Work Sans', sans-serif; /* Шрифт кнопки */
-    font-size: 1.1rem; /* Размер шрифта */
-    margin-top: 3rem; /* Отступ сверху */
-    text-decoration: none; /* Убирает подчеркивание */
-    color: white; /* Цвет текста */
-    background: var(--green); /* Зеленый фон */
-    padding: 20px 30px; /* Внутренние отступы */
-    border-radius: 500px; /* Сильно закругленные углы */
-    display: inline-block; /* Отображение как блочный элемент */
-    /* border-bottom: solid 5px transparent; */ /* Закомментированная нижняя граница */
-    box-shadow: var(--shadow-1-elevation-medium); /* Средняя тень */
-    transition: all 1s ease-in-out, box-shadow 0.5s ease-in-out; /* Плавное изменение стилей и тени */
+.button.choice-btn {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 12px 26px;
+    background-color: transparent;
+    color: var(--green);
+    border: 1.8px solid var(--green);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
-a.button:hover { /* Стиль при наведении на кнопку */
-    /* border-bottom: solid 5px var(--light-green); */ /* Закомментированная нижняя граница при наведении */
-    box-shadow: var(--shadow-1-elevation-high); /* Высокая тень при наведении */
-    transform: scale(1.05); /* Увеличение кнопки на 5% */
+/* Наведение */
+.button.choice-btn:hover {
+    background-color: var(--light-green);
+    color: white;
+    border-color: var(--light-green);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
 }
 
-/* Стили для секции с подарками */
+/* Активное нажатие */
+.button.choice-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+
+/*** GIFT SECTION ***/
+
 section.gift {
-    height: 100vh; /* Полная высота экрана */
-    padding: 0rem 12rem; /* Внутренние отступы слева и справа */
-    z-index: 3; /* Уровень наложения */
+    height: 100vh;
+    padding: 0rem 12rem;
+    z-index: 3;
 }
 
-section.gift img { /* Стили для изображений в секции gift */
-    bottom: -5%; /* Смещение вниз на 5% */
+section.gift img {
+    bottom: -5%;
 }
 
 section.gift img.img-bottom.img-left {
-    height: 40vw; /* Высота левого нижнего изображения 40% от ширины окна */
+    height: 40vw;
 }
 
 section.gift img.img-bottom.img-right {
-    height: 50%; /* Высота правого нижнего изображения 50% от родителя */
+    height: 50%;
 }
 
-.midtext { /* Стили для текста с классом midtext */
-    font-size: 2.5rem; /* Размер шрифта */
+.midtext {
+    font-size: 2.5rem;
 }
 
 /***
 PAGE WHERE
 ***/
-/* Стили для правого нижнего изображения в секции hero на внутренних страницах */
+
 .internal .hero .img-bottom.img-right {
-    width: 50vw; /* Ширина изображения 50% от ширины окна */
-    z-index: 0; /* Помещает изображение под другие элементы */
-    right: -10%; /* Смещает изображение чуть правее на 10% */
-    bottom: -10%; /* Смещает изображение чуть ниже на 10% */
+    width: 50vw;
+    z-index: 0;
+    right: -10%;
+    bottom: -10%;
 }
 
-/* Стили для кнопки RSVP на внутренних страницах */
 .internal .rsvp {
-    position: relative; /* Устанавливает позицию относительно родителя, а не фиксированную */
-    bottom: auto; /* Убирает фиксированное положение снизу */
-    right: auto; /* Убирает фиксированное положение справа */
-    margin-left: 1rem; /* Добавляет отступ слева 1rem */
-    border-radius: 100px; /* Делает углы кнопки круглыми */
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-left: 1rem;
+    border-radius: 100px;
 }
 
 .internal .rsvp img a {
-    height: 70px; /* Устанавливает высоту изображения кнопки 70 пикселей */
-    border-radius: 100px; /* Делает углы изображения круглыми */
+    height: 70px;
+    border-radius: 100px;
 }
 
-/* Закомментированный стиль для нижнего отступа внутренних страниц */
-/* .internal {
-    padding-bottom: 120px; /* Добавляет отступ снизу 120 пикселей (закомментировано)
-} */
 
-/* Стили для навигационной панели */
 div.navigation {
-    position: fixed; /* Фиксирует панель на месте при прокрутке */
-    display: flex; /* Использует flexbox для компоновки */
-    flex-direction: row; /* Элементы выстраиваются в ряд */
-    /* width: 80vw; */ /* Ширина 80% от окна (закомментировано) */
-    height: 70px; /* Высота панели 70 пикселей */
-    bottom: 5%; /* Располагает панель на 5% от низа экрана */
-    z-index: 4; /* Помещает панель выше других элементов */
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    /* width: 80vw; */
+    height: 70px;
+    bottom: 5%;
+    z-index: 4;
 }
 
 div.navigation a img {
-    height: 70px; /* Высота изображений в ссылках 70 пикселей */
-    box-shadow: var(--shadow-1-elevation-medium); /* Добавляет среднюю тень */
-    border-radius: 100px; /* Делает углы изображений круглыми */
+    height: 70px;
+    box-shadow: var(--shadow-1-elevation-medium);
+    border-radius: 100px;
 }
 
 div.navigation a.logo {
-    margin-right: 1rem; /* Отступ справа для логотипа 1rem */
-    z-index: 4; /* Устанавливает уровень наложения для логотипа */
+    margin-right: 1rem;
+    z-index: 4;
 }
 
 div.menu {
-    background-color: white; /* Белый фон для меню */
-    display: flex; /* Использует flexbox */
-    flex-direction: row; /* Элементы в ряд */
-    justify-content: space-around; /* Распределяет элементы равномерно */
-    box-shadow: var(--shadow-1-elevation-medium); /* Средняя тень */
-    border-radius: 100px; /* Круглые углы */
-    height: 70px; /* Высота меню 70 пикселей */
-    width: 70vw; /* Ширина меню 70% от окна */
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: var(--shadow-1-elevation-medium);
+    border-radius: 100px;
+    height: 70px;
+    width: 70vw;
 }
 
 div.navigation a,
-div.navigation a:any-link, /* Стиль для всех ссылок */
-div.navigation a:visited { /* Стиль для посещенных ссылок */
-    color: var(--green); /* Зеленый цвет текста */
-    font-family: 'Cormorant Garamond', serif; /* Шрифт */
-    font-size: 1.4em; /* Размер шрифта */
-    text-decoration: none; /* Убирает подчеркивание */
-    font-weight: 500; /* Средняя толщина шрифта */
-    border-bottom: solid 1px transparent; /* Прозрачная нижняя линия */
-    transition: all 1s ease-in-out; /* Плавное изменение стилей */
+div.navigation a:any-link,
+div.navigation a:visited {
+    color: var(--green);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4em;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: solid 1px transparent;
+    transition: all 1s ease-in-out;
 }
 
-div.navigation .menu a:hover { /* Стиль при наведении на ссылки в меню */
-    border-bottom: solid 1px var(--green); /* Добавляет зеленую линию снизу */
+div.navigation .menu a:hover {
+    border-bottom: solid 1px var(--green);
 }
 
-div.navigation a.logo:hover { /* Стиль при наведении на логотип */
-    border-bottom: solid 1px transparent; /* Убирает линию */
+div.navigation a.logo:hover {
+    border-bottom: solid 1px transparent;
 }
 
 div.navigation .test {
-    opacity: 0; /* Скрывает элемент изначально */
-    pointer-events: none; /* Отключает взаимодействие с мышью */
-    display: flex; /* Использует flexbox */
-    background-color: white; /* Белый фон */
-    width: 100%; /* Ширина 100% от родителя */
-    height: 100%; /* Высота 100% от родителя */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0; /* Прижимает к верху */
-    z-index: 5; /* Высокий уровень наложения */
-    border-radius: 100px; /* Круглые углы */
-    flex-direction: row; /* Элементы в ряд */
-    justify-content: left; /* Выравнивание влево */
-    box-shadow: var(--shadow-1-elevation-high); /* Высокая тень */
-    transition: all 0.8s ease-in-out; /* Плавное появление */
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    border-radius: 100px;
+    flex-direction: row;
+    justify-content: left;
+    box-shadow: var(--shadow-1-elevation-high);
+    transition: all 0.8s ease-in-out;
 }
 
 div.navigation .test div {
-    text-align: center; /* Центрирует текст */
-    width: 100%; /* Ширина 100% */
+    text-align: center;
+    width: 100%;
 }
 
 div.navigation .test div p {
-    color: var(--green); /* Зеленый цвет текста */
+    color: var(--green);
 }
 
-div.navigation a.logo:hover .test { /* Показывает тест при наведении на логотип */
-    opacity: 100%; /* Делает элемент видимым */
+div.navigation a.logo:hover .test {
+    opacity: 100%;
 }
 
-/* Стили для секции hero на внутренних страницах */
 .internal section.hero {
-    padding: 0em 10em; /* Внутренние отступы слева и справа 10em */
+    padding: 0em 10em;
 }
 
 .internal h1 {
-    z-index: 1; /* Устанавливает уровень наложения для заголовка */
+    z-index: 1;
 }
 
-/* Стили для секции размещения */
+/* Accomodations */
+
 #accomodations .bigtext {
-    margin-bottom: 3rem; /* Отступ снизу 3rem */
+    margin-bottom: 3rem;
 }
 
 .columns {
-    display: flex; /* Использует flexbox */
-    flex-direction: row; /* Элементы в ряд */
-    width: 100%; /* Полная ширина */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .column {
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    width: 50%; /* Ширина 50% */
-    padding: 0 2.5em; /* Внутренние отступы слева и справа */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 2.5em;
 }
 
 p.smalldetail {
-    font-family: 'Work Sans', sans-serif; /* Шрифт */
-    font-size: 1rem; /* Размер шрифта */
-    font-weight: 200; /* Легкая толщина шрифта */
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
 }
 
 .column h3 {
-    font-size: 2.5rem; /* Размер шрифта заголовков */
+    font-size: 2.5rem;
 }
 
 p.description {
-    font-size: 1.5rem; /* Размер шрифта описания */
-    font-family: 'Work Sans', sans-serif; /* Шрифт */
-    font-weight: 200; /* Легкая толщина шрифта */
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
 }
 
 .column a {
-    color: var(--green); /* Зеленый цвет ссылок */
-    text-decoration: none; /* Убирает подчеркивание */
-    margin-top: 2rem; /* Отступ сверху */
+    color: var(--green);
+    text-decoration: none;
+    margin-top: 2rem;
 }
 
 #location .description {
-    width: 90%; /* Ширина 90% */
-    line-height: 1.8rem; /* Высота строки */
+    width: 90%;
+    line-height: 1.8rem;
 }
 
 #location .description a {
-    font-size: 1.5rem; /* Размер шрифта */
-    font-family: 'Work Sans', sans-serif; /* Шрифт */
-    transition: all 0.5s ease-in-out; /* Плавное изменение стилей */
-    color: var(--green); /* Зеленый цвет */
-    border-bottom: solid 0px transparent; /* Прозрачная граница */
-    text-decoration: underline; /* Подчеркивание */
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+    transition: all 0.5s ease-in-out;
+    color: var(--green);
+    border-bottom: solid 0px transparent;
+    text-decoration: underline;
 }
 
 #location .description a:hover {
-    color: var(--red); /* Красный цвет при наведении */
+    color: var(--red);
 }
 
 #location .column img {
-    width: 100%; /* Полная ширина изображения */
+    width: 100%;
 }
 
 .icon {
-    width: 25px; /* Ширина иконки 25 пикселей */
+    width: 25px;
 }
 
-/* Стили для секции медового месяца */
+/***
+HONEYMOON
+***/
+
+
 .honeymoon hero {
-    padding: 0em 13em; /* Внутренние отступы слева и справа 13em */
+    padding: 0em 13em;
 }
 .honeymoon div.navigation {
-    width: 80vw; /* Ширина 80% от окна */
-    justify-content: space-between; /* Распределяет элементы с равными промежутками */
+    width:80vw;
+justify-content: space-between;
 }
 .honeymoon h1 {
-    margin-bottom: 4rem; /* Отступ снизу 4rem */
+    margin-bottom: 4rem
 }
 
 .honeymoon span.iban {
-    display: block; /* Отображает как блочный элемент */
-    font-size: 2rem; /* Размер шрифта */
-    margin-bottom: 1rem; /* Отступ снизу */
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .honeymoon span.iban_details {
-    display: block; /* Отображает как блочный элемент */
-    font-size: 1.5rem; /* Размер шрифта */
+    display: block;
+font-size: 1.5rem;
 }
+
+
 /***
 TEXT HIGHLIGHT
-*
-/* Стили для выделенного текста в браузере Firefox */
+***/
+
 ::-moz-selection {
-    /* Специальная команда для Firefox */
-    background: var(--yellow-down); /* Делает фон выделенного текста светло-желтым */
+    /* Code for Firefox */
+    background: var(--yellow-down);
 }
 
-/* Стили для выделенного текста в других браузерах */
 ::selection {
-    background: var(--yellow-down); /* Делает фон выделенного текста светло-желтым */
+    background: var(--yellow-down);
 }
 
-/* Секция с анимациями */
+/***
+ANIMATIONS
+***/
 
-/* Стили для стрелки, которая подпрыгивает */
 .arrow-bounce {
-    position: absolute; /* Размещает стрелку относительно родителя */
-    color: var(--light-green); /* Устанавливает зеленый цвет стрелки */
-    bottom: 2rem; /* Отступ снизу 2rem */
+    position: absolute;
+    color: var(--light-green);
+    bottom: 2rem;
 }
 
-.arrow-bounce i { /* Стили для иконки внутри стрелки */
-    opacity: 30%; /* Делает иконку полупрозрачной на 30% */
+.arrow-bounce i {
+    opacity: 30%;
 }
 
-/* Стили для анимации "фокус-в" */
+
 .focus-in {
-    -webkit-animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530); /* Анимация для Webkit-браузеров (Safari, Chrome) */
-    animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530); /* Анимация для всех браузеров */
+    -webkit-animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530);
 }
 
-/* Определение анимации "фокус-в" для Webkit-браузеров */
 @-webkit-keyframes focus-in {
     0% {
-        -webkit-filter: blur(12px); /* Начинает с размытия на 12 пикселей */
-        filter: blur(12px); /* Размытие для всех браузеров */
-        opacity: 0; /* Прозрачность 0% (невидимый) */
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-filter: blur(0px); /* Убирает размытие */
-        filter: blur(0px); /* Убирает размытие для всех браузеров */
-        opacity: 1; /* Прозрачность 100% (полностью видимый) */
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
 
-/* Определение анимации "фокус-в" для всех браузеров */
 @keyframes focus-in {
     0% {
-        -webkit-filter: blur(12px); /* Начинает с размытия на 12 пикселей */
-        filter: blur(12px); /* Размытие для всех браузеров */
-        opacity: 0; /* Прозрачность 0% (невидимый) */
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-filter: blur(0px); /* Убирает размытие */
-        filter: blur(0px); /* Убирает размытие для всех браузеров */
-        opacity: 1; /* Прозрачность 100% (полностью видимый) */
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
 
-/* Стили для анимации "скольжение с размытием сверху" */
 .slide-in-blurred-top {
-    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit-браузеров */
-    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех браузеров */
+    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-/* Информация о создании анимации (оставлена как комментарий) */
 /* ----------------------------------------------
  * Generated by Animista on 2021-12-21 12:16:23
  * Licensed under FreeBSD License.
@@ -692,1600 +687,154 @@ TEXT HIGHLIGHT
  * animation slide-in-blurred-top
  * ----------------------------------------
  */
-@-webkit-keyframes slide-in-blurred-top { /* Анимация для Webkit-браузеров */
+@-webkit-keyframes slide-in-blurred-top {
     0% {
-        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вверх на 1000px */
-        transform: translateY(-1000px) scaleY(1) scaleX(1); /* То же для всех браузеров */
-        -webkit-transform-origin: 50% 0%; /* Точка начала анимации в центре сверху */
-        transform-origin: 50% 0%; /* То же для всех браузеров */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие для всех браузеров */
-        opacity: 0; /* Невидимый элемент */
+        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1);
+        transform: translateY(-1000px) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех браузеров */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех браузеров */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие для всех браузеров */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-top { /* Анимация для всех браузеров */
+@keyframes slide-in-blurred-top {
     0% {
-        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вверх */
-        transform: translateY(-1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 0%; /* Точка начала */
-        transform-origin: 50% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1);
+        transform: translateY(-1000px) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-/* Стили для анимации "скольжение с размытием снизу" */
+
 .slide-in-blurred-bottom {
-    -webkit-animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
+    -webkit-animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@-webkit-keyframes slide-in-blurred-bottom { /* Анимация для Webkit */
+@-webkit-keyframes slide-in-blurred-bottom {
     0% {
-        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вниз */
-        transform: translateY(1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 100%; /* Точка начала внизу */
-        transform-origin: 50% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1);
+        transform: translateY(1000px) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-bottom { /* Анимация для всех браузеров */
+@keyframes slide-in-blurred-bottom {
     0% {
-        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вниз */
-        transform: translateY(1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 100%; /* Точка начала внизу */
-        transform-origin: 50% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1);
+        transform: translateY(1000px) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-/* Стили для анимации "скольжение с размытием сверху-справа" */
 .slide-in-blurred-tr {
-    -webkit-animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
+    -webkit-animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@-webkit-keyframes slide-in-blurred-tr { /* Анимация для Webkit */
+@-webkit-keyframes slide-in-blurred-tr {
     0% {
-        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg); /* Начинает с правого верхнего угла */
-        transform: translate(1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 0%; /* Точка начала в левом верхнем углу */
-        transform-origin: 0% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg);
+        transform: translate(1000px, -1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-tr { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg); /* Начинает с правого верхнего угла */
-        transform: translate(1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 0%; /* Точка начала */
-        transform-origin: 0% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Стили для анимации "скольжение с размытием снизу-справа" */
-.slide-in-blurred-br {
-    -webkit-animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-/* Информация о создании анимации (оставлена как комментарий) */
-/* ----------------------------------------------
- * Generated by Animista on 2021-12-21 12:21:55
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-in-blurred-br
- * ----------------------------------------
- */
-@-webkit-keyframes slide-in-blurred-br { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg); /* Начинает с правого нижнего угла */
-        transform: translate(1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 100%; /* Точка начала внизу слева */
-        transform-origin: 0% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-br { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg); /* Начинает с правого нижнего угла */
-        transform: translate(1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 100%; /* Точка начала */
-        transform-origin: 0% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Стили для анимации "скольжение с размытием снизу-слева" */
-.slide-in-blurred-bl {
-    -webkit-animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-@-webkit-keyframes slide-in-blurred-bl { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* Начинает с левого нижнего угла */
-        transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 100%; /* Точка начала внизу справа */
-        transform-origin: 100% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-bl { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* Начинает с левого нижнего угла */
-        transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 100%; /* Точка начала */
-        transform-origin: 100% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Стили для анимации "скольжение с размытием сверху-слева" */
-.slide-in-blurred-tl {
-    -webkit-animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-@-webkit-keyframes slide-in-blurred-tl { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* Начинает с левого верхнего угла */
-        transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 0%; /* Точка начала вверху справа */
-        transform-origin: 100% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-tl { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* Начинает с левого верхнего угла */
-        transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 0%; /* Точка начала */
-        transform-origin: 100% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Секция для задержек анимаций (закомментировано) */
-
-/** Delay **/
-/* Задержки для анимаций */
-
-/* Задержка анимации 0 секунд */
-.del-0 {
-    animation-delay: 0s; /* Анимация начинается сразу */
-}
-
-/* Задержка анимации 0.25 секунды */
-.del-025 {
-    animation-delay: 0.25s; /* Анимация начинается через 0.25 секунды */
-}
-
-/* Задержка анимации 0.50 секунды */
-.del-050 {
-    animation-delay: 0.50s; /* Анимация начинается через 0.5 секунды */
-}
-
-/* Задержка анимации 0.75 секунды */
-.del-075 {
-    animation-delay: 0.75s; /* Анимация начинается через 0.75 секунды */
-}
-
-/* Задержка анимации 1 секунда */
-.del-1 {
-    animation-delay: 1s; /* Анимация начинается через 1 секунду */
-}
-
-/* Задержка анимации 1.25 секунды */
-.del-125 {
-    animation-delay: 1.25s; /* Анимация начинается через 1.25 секунды */
-}
-
-/* Задержка анимации 1.50 секунды */
-.del-150 {
-    animation-delay: 1.50s; /* Анимация начинается через 1.5 секунды */
-}
-
-/* Задержка анимации 1.75 секунды */
-.del-175 {
-    animation-delay: 1.75s; /* Анимация начинается через 1.75 секунды */
-}
-
-/* Задержка анимации 2 секунды */
-.del-2 {
-    animation-delay: 2s; /* Анимация начинается через 2 секунды */
-}
-
-/* Задержка анимации 2.25 секунды */
-.del-225 {
-    animation-delay: 2.25s; /* Анимация начинается через 2.25 секунды */
-}
-
-/* Задержка анимации 2.50 секунды */
-.del-250 {
-    animation-delay: 2.50s; /* Анимация начинается через 2.5 секунды */
-}
-
-/* Задержка анимации 2.75 секунды */
-.del-275 {
-    animation-delay: 2.75s; /* Анимация начинается через 2.75 секунды */
-}
-
-/* Задержка анимации 3 секунды */
-.del-3 {
-    animation-delay: 3s; /* Анимация начинается через 3 секунды */
-}
-
-/* Задержка анимации 3.25 секунды */
-.del-325 {
-    animation-delay: 3.25s; /* Анимация начинается через 3.25 секунды */
-}
-
-/* Задержка анимации 3.50 секунды */
-.del-350 {
-    animation-delay: 3.50s; /* Анимация начинается через 3.5 секунды */
-}
-
-/* Задержка анимации 3.75 секунды */
-.del-375 {
-    animation-delay: 3.75s; /* Анимация начинается через 3.75 секунды */
-}
-
-/* Задержка анимации 4 секунды */
-.del-4 {
-    animation-delay: 4s; /* Анимация начинается через 4 секунды */
-}
-
-/* Длительность анимаций */
-
-/* Длительность анимации 0 секунд */
-.dur-0 {
-    animation-duration: 0s; /* Анимация длится 0 секунд (нет анимации) */
-}
-
-/* Длительность анимации 0.25 секунды */
-.dur-025 {
-    animation-duration: 0.25s; /* Анимация длится 0.25 секунды */
-}
-
-/* Длительность анимации 0.50 секунды */
-.dur-050 {
-    animation-duration: 0.50s; /* Анимация длится 0.5 секунды */
-}
-
-/* Длительность анимации 0.75 секунды */
-.dur-075 {
-    animation-duration: 0.75s; /* Анимация длится 0.75 секунды */
-}
-
-/* Длительность анимации 1 секунда */
-.dur-1 {
-    animation-duration: 1s; /* Анимация длится 1 секунду */
-}
-
-/* Длительность анимации 1.25 секунды */
-.dur-125 {
-    animation-duration: 1.25s; /* Анимация длится 1.25 секунды */
-}
-
-/* Длительность анимации 1.50 секунды */
-.dur-150 {
-    animation-duration: 1.50s; /* Анимация длится 1.5 секунды */
-}
-
-/* Длительность анимации 1.75 секунды */
-.dur-175 {
-    animation-duration: 1.75s; /* Анимация длится 1.75 секунды */
-}
-
-/* Длительность анимации 2 секунды */
-.dur-2 {
-    animation-duration: 2s; /* Анимация длится 2 секунды */
-}
-
-/* Длительность анимации 2.25 секунды */
-.dur-225 {
-    animation-duration: 2.25s; /* Анимация длится 2.25 секунды */
-}
-
-/* Длительность анимации 2.50 секунды */
-.dur-250 {
-    animation-duration: 2.50s; /* Анимация длится 2.5 секунды */
-}
-
-/* Длительность анимации 2.75 секунды */
-.dur-275 {
-    animation-duration: 2.75s; /* Анимация длится 2.75 секунды */
-}
-
-/* Длительность анимации 3 секунды */
-.dur-3 {
-    animation-duration: 3s; /* Анимация длится 3 секунды */
-}
-
-/* Длительность анимации 3.25 секунды */
-.dur-325 {
-    animation-duration: 3.25s; /* Анимация длится 3.25 секунды */
-}
-
-/* Длительность анимации 3.50 секунды */
-.dur-350 {
-    animation-duration: 3.50s; /* Анимация длится 3.5 секунды */
-}
-
-/* Длительность анимации 3.75 секунды */
-.dur-375 {
-    animation-duration: 3.75s; /* Анимация длится 3.75 секунды */
-}
-
-/* Длительность анимации 4 секунды */
-.dur-4 {
-    animation-duration: 4s; /* Анимация длится 4 секунды */
-}
-
-/* Секция для адаптивности (отклика на размер экрана) */
-
-/* Правила для экранов шириной до 1200px */
-@media (max-width: 1200px) {
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 4rem; /* Уменьшает размер шрифта до 4rem */
-    }
-}
-
-/* Правила для экранов шириной до 992px */
-@media (max-width: 992px) {
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 2.5rem; /* Уменьшает размер шрифта до 2.5rem */
-    }
-
-    .home .hero .img-top.img-left { /* Левое верхнее изображение в секции hero */
-        height: 40vh; /* Устанавливает высоту 40% от экрана */
-    }
-
-    .home .hero .img-top.img-right { /* Правое верхнее изображение в секции hero */
-        height: 40vh; /* Устанавливает высоту 40% от экрана */
-    }
-
-    .home .hero .img-bottom.img-left { /* Левое нижнее изображение в секции hero */
-        height: 50vh; /* Устанавливает высоту 50% от экрана */
-    }
-
-    .home .hero .img-bottom.img-right { /* Правое нижнее изображение в секции hero */
-        height: 50vh; /* Устанавливает высоту 50% от экрана */
-    }
-
-    h1, /* Все заголовки h1 */
-    p.bigtext { /* Текст с классом bigtext */
-        font-size: 3rem; /* Уменьшает размер шрифта до 3rem */
-    }
-
-    .video iframe { /* Видео в секции video */
-        width: 900px; /* Устанавливает ширину 900 пикселей */
-        height: 506px; /* Устанавливает высоту 506 пикселей */
-    }
-
-    section.standard { /* Стандартные секции */
-        padding: 8rem; /* Устанавливает внутренние отступы 8rem */
-    }
-}
-
-/* Правила для экранов шириной до 768px */
-@media (max-width: 768px) {
-    h1, /* Все заголовки h1 */
-    p.bigtext, /* Текст с классом bigtext */
-    p.hugetext { /* Текст с классом hugetext */
-        font-size: 2rem; /* Уменьшает размер шрифта до 2rem */
-    }
-
-    .internal section.hero { /* Секция hero на внутренних страницах */
-        padding: 0 5rem; /* Устанавливает отступы слева и справа 5rem */
-    }
-
-    .internal .hero .img-bottom.img-right { /* Правое нижнее изображение в hero */
-        height: 65vw; /* Устанавливает высоту 65% от ширины окна */
-        width: auto; /* Автоматическая ширина */
-    }
-
-    section.standard { /* Стандартные секции */
-        padding: 5rem; /* Устанавливает внутренние отступы 5rem */
-    }
-
-    section.video img.img-top.img-left { /* Левое верхнее изображение в секции video */
-        height: 40vw; /* Устанавливает высоту 40% от ширины окна */
-    }
-
-    section.video img.img-top.img-right { /* Правое верхнее изображение в секции video */
-        height: 60vw; /* Устанавливает высоту 60% от ширины окна */
-    }
-
-    section.video img.img-bottom.img-left { /* Левое нижнее изображение в секции video */
-        height: 50vw; /* Устанавливает высоту 50% от ширины окна */
-    }
-
-    section.video img.img-bottom.img-right { /* Правое нижнее изображение в секции video */
-        height: 25vw; /* Устанавливает высоту 25% от ширины окна */
-    }
-
-    .video iframe { /* Видео в секции video */
-        width: 600px; /* Устанавливает ширину 600 пикселей */
-        height: 338px; /* Устанавливает высоту 338 пикселей */
-    }
-
-    .columns { /* Блочные колонки */
-        flex-direction: column; /* Меняет расположение на столбец */
-    }
-
-    .columns .column:first-child { /* Первая колонка в блоке */
-        margin-bottom: 8rem; /* Добавляет отступ снизу 8rem */
-    }
-
-    .column { /* Все колонки */
-        padding: 0rem; /* Убирает внутренние отступы */
-        width: 100%; /* Устанавливает ширину 100% */
-    }
-    .logo div.test { /* Тестовый див внутри логотипа */
-        display: none; /* Скрывает этот элемент */
-    }
-
-    .honeymoon span.iban { /* Текст с классом iban в секции honeymoon */
-        font-size: 1.5rem; /* Уменьшает размер шрифта до 1.5rem */
-    }
-    .honeymoon span.iban_details { /* Детали текста iban */
-        font-size: 1.2rem; /* Уменьшает размер шрифта до 1.2rem */
-    }
-}
-
-/* Правила для экранов шириной до 576px */
-@media (max-width: 576px) {
-    .home section.hero .img-top.img-left { /* Левое верхнее изображение в hero */
-        height: 35vw; /* Устанавливает высоту 35% от ширины окна */
-    }
-
-    .home section.hero .img-top.img-right { /* Правое верхнее изображение в hero */
-        height: 40vw; /* Устанавливает высоту 40% от ширины окна */
-    }
-
-    .home section.hero .img-bottom.img-left { /* Левое нижнее изображение в hero */
-        height: 0vw; /* Устанавливает высоту 0% (скрывает) */
-    }
-
-    .home section.hero .img-bottom.img-right { /* Правое нижнее изображение в hero */
-        height: 75vw; /* Устанавливает высоту 75% от ширины окна */
-    }
-
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 2rem; /* Уменьшает размер шрифта до 2rem */
-    }
-
-    .home .bounce { /* Элемент с классом bounce */
-        display: none; /* Скрывает элемент */
-    }
-
-    .home div.rsvp { /* Блок RSVP на главной */
-        right: 1rem; /* Отступ справа 1rem */
-        bottom: 1rem; /* Отступ снизу 1rem */
-        z-index: 4; /* Устанавливает уровень наложения */
-    }
-
-    .internal .navigation { /* Навигация на внутренних страницах */
-        position: fixed; /* Фиксирует навигацию при прокрутке */
-    }
-
-    .internal .logo { /* Логотип на внутренних страницах */
-        position: fixed; /* Фиксирует логотип */
-        top: 1rem; /* Отступ сверху 1rem */
-        left: 1rem; /* Отступ слева 1rem */
-    }
-
-    .internal .rsvp { /* Кнопка RSVP на внутренних страницах */
-        position: fixed; /* Фиксирует кнопку */
-        top: 1rem; /* Отступ сверху 1rem */
-        right: 1rem; /* Отступ справа 1rem */
-    }
-
-    .internal .menu { /* Меню на внутренних страницах */
-        width: 90vw; /* Ширина 90% от окна */
-        font-size: 0.9rem; /* Уменьшает размер шрифта */
-        height: 50px; /* Устанавливает высоту 50 пикселей */
-    }
-
-    .video iframe { /* Видео в секции video */
-        width: 500px; /* Устанавливает ширину 500 пикселей */
-        height: 280px; /* Устанавливает высоту 280 пикселей */
-    }
-
-    .home section.gift .img-bottom.img-left { /* Левое нижнее изображение в секции gift */
-        height: 0vw; /* Устанавливает высоту 0% (скрывает) */
-    }
-    .home section.gift .img-bottom.img-right { /* Правое нижнее изображение в секции gift */
-        height: 70vw; /* Устанавливает высоту 70% от ширины окна */
-    }
-}
-
-/* Стили для телефонных ссылок */
-a[href^="tel"] { /* Ссылки, начинающиеся с "tel" (телефонные номера) */
-    color: inherit; /* Наследует цвет от родителя */
-    text-decoration: none; /* Убирает подчеркивание */
-}
-
-/* Пустые строки (оставлены для структуры, ничего не делают) */
-
-
-
-
-
-
-
-
-/* Стили для блока с выбором */
-/* Блок 3 */
-
-/* Стили для секции выбора - задает общий контейнер с начальным фоном и размерами */
-#choice {
-    background-color: var(--beige); /* Начальный бежевый фон, виден сразу */
-    padding: 2rem; /* Внутренние отступы для контента */
-    z-index: 12; /* Устанавливает уровень наложения выше других элементов */
-    position: relative; /* Относительное позиционирование для вложенных элементов */
-    text-align: center; /* Центрирует текст и кнопки */
-    min-height: 100vh; /* Минимальная высота равна высоте экрана */
-    overflow: hidden; /* Скрывает переполняющиеся элементы */
-    position: relative; /* Для позиционирования псевдоэлемента */
-}
-
-/* Псевдоэлемент для анимации фона с изображением */
-#choice::before {
-    content: ''; /* Обязательный контент для псевдоэлемента */
-    position: absolute; /* Абсолютное позиционирование поверх основного фона */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('C:/Users/user/Documents/FamilyBeginsWithYou/FamilyBeginsWithYou/Wedding-Website-Template-main/assets/фон.png'); /* Фоновое изображение */
-    background-size: cover; /* Обеспечивает покрытие всей секции */
-    background-position: center; /* Центрирует фон */
-    opacity: 0; /* Начальная прозрачность */
-    z-index: 0; /* Под текстом и кнопками */
-    animation: fadeInBackground 4s ease-in-out 2s forwards; /* Анимация появления фона с задержкой 2s */
-}
-
-/* Анимация для плавного появления фонового изображения */
-@keyframes fadeInBackground {
-    0% { opacity: 0; } /* Начало: полностью прозрачен */
-    50% { opacity: 0.5; } /* Половинная прозрачность для эффекта растворения */
-    100% { opacity: 1; } /* Полное появление */
-}
-
-/* Стили для заголовка выбора - определяет шрифт, размер и читаемость */
-.choice-title {
-    font-family: 'Amalfi-Coast', serif; /* Декоративный шрифт сайта */
-    font-size: 3rem; /* Базовый размер текста */
-    color: var(--green); /* Зеленый цвет текста */
-    margin-bottom: 2rem; /* Отступ снизу */
-    line-height: 1.05em; /* Оптимизированная высота строки */
-    letter-spacing: 0.5px; /* Легкое увеличение интервала */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Тень для читаемости */
-    position: relative; /* Относительное позиционирование */
-    z-index: 2; /* Выше фонового изображения */
-}
-
-/* Стили для контейнера кнопок - управляет компоновкой */
-.choice-buttons {
-    display: flex; /* Flexbox для горизонтального расположения */
-    justify-content: center; /* Центрирование кнопок */
-    gap: 1.5rem; /* Расстояние между кнопками */
-    flex-wrap: wrap; /* Перенос кнопок при необходимости */
-    position: relative; /* Относительное позиционирование */
-    z-index: 2; /* Выше фонового изображения */
-}
-
-/* Стили для кнопок выбора - определяет внешний вид и поведение */
-.choice-btn {
-    font-family: 'Work Sans', sans-serif; /* Шрифт кнопок */
-    font-size: 1.2rem; /* Базовый размер текста */
-    padding: 1rem 2rem; /* Внутренние отступы */
-    border: none; /* Убирает границы */
-    border-radius: 50px; /* Закругленные углы */
-    background-color: var(--green); /* Зеленый фон */
-    color: white; /* Белый текст */
-    cursor: pointer; /* Курсор при наведении */
-    transition: all 0.5s ease-in-out; /* Плавный переход */
-    box-shadow: var(--shadow-1-elevation-medium); /* Средняя тень */
-}
-
-.choice-btn:hover {
-    background-color: var(--red); /* Изменение цвета при наведении */
-    transform: scale(1.05); /* Небольшое увеличение */
-    box-shadow: var(--shadow-1-elevation-high); /* Усиленная тень */
-}
-
-/* Стили для декоративного изображения сверху (опционально) */
-.img-remark {
-    display: block; /* Блочное отображение */
-    max-width: 40vw; /* Максимальная ширина */
-    margin: 0 auto 2rem auto; /* Центрирование с отступом */
-    position: relative; /* Относительное позиционирование */
-    z-index: 2; /* Выше фонового изображения */
-}
-
-/* Стили для декоративных изображений - общие настройки */
-#choice .img-over {
-    display: block; /* Блочное отображение */
-    position: absolute; /* Абсолютное позиционирование */
-    pointer-events: none; /* Отключает взаимодействие */
-    z-index: 1; /* Между фоном и текстом */
-    opacity: 0; /* Начальная прозрачность */
-    image-rendering: -webkit-optimize-contrast; /* Оптимизация резкости */
-    animation-timing-function: ease-in-out; /* Плавная анимация */
-}
-
-/* Позиционирование и анимация для фонового цветочка в левом верхнем углу */
-#choice .img-over.flower-top-left {
-    top: 0; /* Прижимает к верху */
-    left: 0; /* Прижимает к левому краю */
-    height: 30vh; /* Высота */
-    animation: slide-in-blurred-tl 6s ease-in-out 0.2s forwards; /* Медленная анимация с задержкой 0.5s */
-}
-
-/* Позиционирование и анимация для бабочки справа ниже центра */
-#choice .img-over.butterfly-right {
-    right: 5%; /* Отступ от правого края */
-    top: 50%; /* Центр по вертикали */
-    transform: translateY(20%); /* Смещение вниз */
-    height: 40vh; /* Высота */
-    animation: slide-in-blurred-tr 3s ease-in-out 1s forwards; /* Медленная анимация с задержкой 1s */
-}
-
-/* Анимация для появления изображения слева сверху */
-@keyframes slide-in-blurred-tl {
-    from { transform: translate(-20%, -20%) scale(1); opacity: 0; }
-    to { transform: translate(0, 0) scale(1); opacity: 1; }
-}
-
-/* Анимация для появления изображения справа снизу */
 @keyframes slide-in-blurred-tr {
-    from { transform: translate(20%, -20%) scale(1); opacity: 0; }
-    to { transform: translate(0, 0) scale(1); opacity: 1; }
-}
-
-/* Адаптивность для экранов до 992px - регулирует размеры */
-@media (max-width: 992px) {
-    .choice-title {
-        font-size: 2.5rem; /* Уменьшение текста */
-    }
-    .choice-btn {
-        font-size: 1.1rem; /* Уменьшение кнопок */
-        padding: 0.8rem 1.5rem; /* Снижение отступов */
-    }
-    #choice .img-over.flower-top-left {
-        height: 25vh; /* Уменьшение цветочка */
-    }
-    #choice .img-over.butterfly-right {
-        height: 35vh; /* Уменьшение бабочки */
-    }
-    .img-remark {
-        max-width: 50vw; /* Увеличение ширины */
-    }
-}
-
-/* Адаптивность для экранов до 768px - оптимизация для планшетов */
-@media (max-width: 768px) {
-    .choice-title {
-        font-size: 2rem; /* Дополнительное уменьшение */
-    }
-    .choice-btn {
-        font-size: 1rem; /* Дополнительное уменьшение */
-        padding: 0.6rem 1.2rem; /* Снижение отступов */
-    }
-    #choice .img-over.flower-top-left {
-        height: 20vw; /* Адаптация размера */
-    }
-    #choice .img-over.butterfly-right {
-        height: 30vw; /* Адаптация размера */
-        right: 2%; /* Уменьшение отступа */
-        top: 55%; /* Смещение вниз */
-    }
-    .img-remark {
-        max-width: 60vw; /* Увеличение ширины */
-    }
-}
-
-/* Адаптивность для экранов до 576px - оптимизация для мобильных */
-@media (max-width: 576px) {
-    #choice {
-        padding: 1rem; /* Уменьшение отступов */
-        min-height: auto; /* Удаление фиксированной высоты */
-    }
-    .choice-title {
-        font-size: 1.5rem; /* Минимальный размер */
-    }
-    .choice-btn {
-        font-size: 0.9rem; /* Минимальный размер */
-        padding: 0.5rem 1rem; /* Минимальные отступы */
-        width: 100%; /* Полная ширина */
-        margin-bottom: 1rem; /* Отступ между кнопками */
-    }
-    .choice-buttons {
-        flex-direction: column; /* Вертикальное расположение */
-    }
-    #choice .img-over.flower-top-left {
-        height: 15vw; /* Минимальный размер */
-    }
-    #choice .img-over.butterfly-right {
-        height: 25vw; /* Минимальный размер */
-        right: 0; /* Прижимает к краю */
-        top: 60%; /* Дополнительное смещение */
-    }
-    .img-remark {
-        max-width: 80vw; /* Максимальная ширина */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Стили для секции с фотографиями */
-.photo-section {
-    min-height: 100vh; /* Минимальная высота равна высоте экрана */
-    background-color: var(--beige); /* Бежевый фон */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    align-items: center; /* Центрирует элементы по горизонтали */
-    justify-content: center; /* Центрирует элементы по вертикали */
-    padding: 2rem; /* Внутренние отступы */
-}
-
-.photo-section h2 { /* Заголовок секции с фотографиями */
-    font-family: 'Cormorant Garamond', serif; /* Шрифт */
-    font-size: 2.5rem; /* Размер шрифта */
-    color: var(--text); /* Цвет текста */
-    margin-bottom: 2rem; /* Отступ снизу */
-}
-
-/* Стили для галереи фотографий */
-.photo-gallery {
-    display: grid; /* Использует сетку */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Автоматически подстраивает колонки */
-    gap: 1rem; /* Расстояние между изображениями */
-    width: 90%; /* Ширина 90% */
-    max-width: 1000px; /* Максимальная ширина 1000px */
-}
-
-.photo-gallery img { /* Изображения в галерее */
-    width: 100%; /* Полная ширина контейнера */
-    height: auto; /* Автоматическая высота */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: var(--shadow-1-elevation-low); /* Низкая тень */
-    border: 2px solid var(--light-green); /* Зеленая рамка */
-}
-
-/* Адаптивность для экранов до 768px */
-@media (max-width: 768px) {
-    .photo-gallery { /* Галерея фотографий */
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Уменьшает минимальную ширину колонок */
-    }
-}
-
-/* Адаптивность для экранов до 576px */
-@media (max-width: 576px) {
-    .photo-section h2 { /* Заголовок секции */
-        font-size: 1.5rem; /* Уменьшает размер шрифта */
-    }
-    .photo-gallery { /* Галерея фотографий */
-        grid-template-columns: 1fr; /* Одна колонка */
-    }
-}
-
-/* Общие стили для HTML */
-html {
-    scroll-snap-type: y mandatory; /* Делает прокрутку по секциям с точной остановкой */
-    height: 100%; /* Устанавливает высоту 100% от окна */
-}
-
-/* Общие стили для body */
-body {
-    margin: 0; /* Убирает все внешние отступы */
-    height: 100%; /* Устанавливает высоту 100% от окна */
-}
-
-/* Общие стили для секций */
-section {
-    min-height: 100vh; /* Минимальная высота равна высоте экрана */
-    scroll-snap-align: start; /* Выравнивает секцию при прокрутке */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    justify-content: center; /* Центрирует содержимое по вертикали */
-    align-items: center; /* Центрирует содержимое по горизонтали */
-    overflow: hidden; /* Скрывает лишний контент за пределами секции */
-}
-
-/* Стили для секции welcome */
-#welcome {
-    padding: 2rem; /* Добавляет отступы со всех сторон 2rem */
-    background-color: white; /* Устанавливает белый фон */
-}
-
-/* Стили для текста с классом bigtext */
-.bigtext {
-    font-size: 3rem; /* Устанавливает размер шрифта 3rem */
-    line-height: 1; /* Устанавливает высоту строки равной размеру шрифта */
-    max-width: 800px; /* Ограничивает максимальную ширину текста 800px */
-    margin: 0 auto; /* Центрирует текст с автоматическими отступами */
-    text-align: center; /* Выравнивает текст по центру */
-    font-family: 'Georgia', serif; /* Устанавливает шрифт Georgia */
-    color: var(--text); /* Устанавливает цвет текста из переменной */
-}
-
-.bigtext p { /* Стили для параграфов внутри bigtext */
-    margin-bottom: 1.2rem; /* Добавляет отступ снизу 1.2rem */
-}
-
-/* Стили для блока с выбором */
-.thin-choice {
-    padding: 1rem; /* Добавляет внутренние отступы 1rem */
-    text-align: center; /* Центрирует текст */
-    min-height: 100vh; /* Устанавливает минимальную высоту равной высоте экрана */
-    z-index: 12; /* Устанавливает уровень наложения */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    justify-content: center; /* Центрирует содержимое по вертикали */
-}
-
-/* Адаптивность для экранов до 768px */
-@media (max-width: 768px) {
-    .bigtext { /* Текст с классом bigtext */
-        font-size: 2rem; /* Уменьшает размер шрифта до 2rem */
-    }
-}
-
-/* Адаптивность для экранов до 576px */
-@media (max-width: 576px) {
-    .bigtext { /* Текст с классом bigtext */
-        font-size: 1.5rem; /* Уменьшает размер шрифта до 1.5rem */
-    }
-}
-
-/* Стили для секции с фотографиями */
-.photo-section {
-    min-height: 100vh; /* Устанавливает минимальную высоту равной высоте экрана */
-    background-color: var(--beige); /* Устанавливает бежевый фон */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    align-items: center; /* Центрирует элементы по горизонтали */
-    justify-content: center; /* Центрирует элементы по вертикали */
-    padding: 2rem; /* Добавляет внутренние отступы 2rem */
-    position: relative; /* Устанавливает относительное позиционирование */
-}
-
-.photo-section h2 { /* Заголовок секции */
-    font-family: 'Cormorant Garamond', serif; /* Устанавливает шрифт */
-    font-size: 2.5rem; /* Устанавливает размер шрифта */
-    color: var(--text); /* Устанавливает цвет текста */
-    margin-bottom: 2rem; /* Добавляет отступ снизу */
-    text-align: center; /* Выравнивает текст по центру */
-}
-
-.photo-layout { /* Контейнер для фотографий */
-    display: flex; /* Использует flexbox */
-    flex-wrap: wrap; /* Разрешает перенос элементов */
-    justify-content: center; /* Центрирует элементы по горизонтали */
-    align-items: center; /* Центрирует элементы по вертикали */
-    width: 90%; /* Устанавливает ширину 90% */
-    max-width: 1000px; /* Ограничивает максимальную ширину 1000px */
-    gap: 2rem; /* Устанавливает расстояние между элементами */
-}
-
-.photo-item { /* Каждый элемент с фотографией */
-    flex: 1; /* Элемент занимает доступное место */
-    min-width: 300px; /* Устанавливает минимальную ширину 300px */
-    display: flex; /* Использует flexbox */
-    align-items: center; /* Центрирует содержимое по вертикали */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
-}
-
-.photo-item img { /* Изображения внутри photo-item */
-    width: 100%; /* Устанавливает ширину 100% от родителя */
-    height: auto; /* Автоматическая высота */
-    border-radius: 8px; /* Добавляет закругленные углы */
-    box-shadow: var(--shadow-1-elevation-low); /* Добавляет слабую тень */
-    border: 2px solid var(--light-green); /* Добавляет зеленую рамку */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.photo-item img:hover { /* Эффект при наведении на изображение */
-    transform: scale(1.05); /* Увеличивает изображение на 5% */
-    box-shadow: var(--shadow-1-elevation-high); /* Увеличивает тень */
-}
-
-.photo-text { /* Текстовый блок рядом с фото */
-    flex: 1; /* Элемент занимает доступное место */
-    min-width: 300px; /* Устанавливает минимальную ширину 300px */
-    padding: 1rem; /* Добавляет внутренние отступы */
-    font-family: 'Work Sans', sans-serif; /* Устанавливает шрифт */
-    font-size: 1.2rem; /* Устанавливает размер шрифта */
-    color: var(--text); /* Устанавливает цвет текста */
-    line-height: 1.6; /* Устанавливает высоту строки */
-    text-align: left; /* Выравнивает текст по левому краю */
-}
-
-.photo-decoration { /* Декоративное изображение */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 5%; /* Отступ сверху 5% */
-    left: 5%; /* Отступ слева 5% */
-    width: 15vw; /* Ширина 15% от ширины окна */
-    height: auto; /* Автоматическая высота */
-    opacity: 0.7; /* Прозрачность 70% */
-    z-index: 0; /* Помещает под другие элементы */
-}
-
-.photo-decoration.bottom-right { /* Декоративное изображение в правом нижнем углу */
-    top: auto; /* Убирает верхний отступ */
-    bottom: 5%; /* Отступ снизу 5% */
-    left: auto; /* Убирает левый отступ */
-    right: 5%; /* Отступ справа 5% */
-}
-
-/* Адаптивность для экранов до 768px */
-@media (max-width: 768px) {
-    .photo-layout { /* Контейнер для фотографий */
-        flex-direction: column; /* Меняет на столбец */
-        text-align: center; /* Центрирует текст */
-    }
-    .photo-item, .photo-text { /* Элементы фото и текста */
-        min-width: 100%; /* Устанавливает ширину 100% */
-    }
-    .photo-decoration { /* Декоративное изображение */
-        width: 20vw; /* Увеличивает ширину до 20% */
-    }
-}
-
-/* Адаптивность для экранов до 576px */
-@media (max-width: 576px) {
-    .photo-section h2 { /* Заголовок секции */
-        font-size: 1.5rem; /* Уменьшает размер шрифта */
-    }
-    .photo-text { /* Текстовый блок */
-        font-size: 1rem; /* Уменьшает размер шрифта */
-    }
-    .photo-decoration { /* Декоративное изображение */
-        width: 25vw; /* Увеличивает ширину до 25% */
-    }
-}
-
-/* Стили для декоративного изображения */
-img.img-remark {
-    width: 40vw; /* Устанавливает ширину 40% от ширины окна */
-}
-
-img.remark-top { /* Верхнее декоративное изображение */
-    margin-bottom: 5rem; /* Добавляет отступ снизу 5rem */
-}
-
-/* Стили для кнопки */
-a.button {
-    font-family: 'Work Sans', sans-serif; /* Устанавливает шрифт */
-    font-size: 1.1rem; /* Устанавливает размер шрифта */
-    margin-top: 3rem; /* Добавляет отступ сверху */
-    text-decoration: none; /* Убирает подчеркивание */
-    color: white; /* Устанавливает белый цвет текста */
-    background: var(--green); /* Устанавливает зеленый фон */
-    padding: 20px 30px; /* Добавляет внутренние отступы */
-    border-radius: 500px; /* Делает углы сильно закругленными */
-    display: inline-block; /* Отображает как блочный элемент */
-    /* border-bottom: solid 5px transparent; */ /* Закомментированная нижняя граница */
-    box-shadow: var(--shadow-1-elevation-medium); /* Добавляет среднюю тень */
-    transition: all 1s ease-in-out, box-shadow 0.5s ease-in-out; /* Плавное изменение стилей и тени */
-}
-
-a.button:hover { /* Эффект при наведении на кнопку */
-    /* border-bottom: solid 5px var(--light-green); */ /* Закомментированная нижняя граница */
-    box-shadow: var(--shadow-1-elevation-high); /* Увеличивает тень */
-    transform: scale(1.05); /* Увеличивает кнопку на 5% */
-}
-
-/* Секция с подарками */
-section.gift {
-    height: 100vh; /* Устанавливает высоту равной высоте экрана */
-    padding: 0rem 12rem; /* Добавляет отступы слева и справа 12rem */
-    z-index: 3; /* Устанавливает уровень наложения */
-}
-
-section.gift img { /* Изображения в секции gift */
-    bottom: -5%; /* Смещает изображения вниз на 5% */
-}
-
-section.gift img.img-bottom.img-left { /* Левое нижнее изображение */
-    height: 40vw; /* Устанавливает высоту 40% от ширины окна */
-}
-
-section.gift img.img-bottom.img-right { /* Правое нижнее изображение */
-    height: 50%; /* Устанавливает высоту 50% от родителя */
-}
-
-.midtext { /* Текст с классом midtext */
-    font-size: 2.5rem; /* Устанавливает размер шрифта */
-}
-
-/* Секция для внутренних страниц */
-.internal .hero .img-bottom.img-right {
-    width: 50vw; /* Устанавливает ширину 50% от ширины окна */
-    z-index: 0; /* Помещает под другие элементы */
-    right: -10%; /* Смещает вправо на 10% */
-    bottom: -10%; /* Смещает вниз на 10% */
-}
-
-.internal .rsvp { /* Кнопка RSVP на внутренних страницах */
-    position: relative; /* Устанавливает относительное позиционирование */
-    bottom: auto; /* Убирает фиксированное положение снизу */
-    right: auto; /* Убирает фиксированное положение справа */
-    margin-left: 1rem; /* Добавляет отступ слева */
-    border-radius: 100px; /* Делает углы круглыми */
-}
-
-.internal .rsvp img a { /* Ссылка внутри изображения RSVP */
-    height: 70px; /* Устанавливает высоту 70 пикселей */
-    border-radius: 100px; /* Делает углы круглыми */
-}
-
-/* Закомментированный стиль для внутренних страниц */
-/* .internal {
-    padding-bottom: 120px; /* Добавляет отступ снизу (закомментировано)
-} */
-
-div.navigation { /* Навигационная панель */
-    position: fixed; /* Фиксирует панель при прокрутке */
-    display: flex; /* Использует flexbox */
-    flex-direction: row; /* Элементы в ряд */
-    /* width: 80vw; */ /* Ширина 80% от окна (закомментировано) */
-    height: 70px; /* Устанавливает высоту 70 пикселей */
-    bottom: 5%; /* Располагает на 5% от низа */
-    z-index: 4; /* Устанавливает уровень наложения */
-}
-
-div.navigation a img { /* Изображения в ссылках навигации */
-    height: 70px; /* Устанавливает высоту 70 пикселей */
-    box-shadow: var(--shadow-1-elevation-medium); /* Добавляет среднюю тень */
-    border-radius: 100px; /* Делает углы круглыми */
-}
-
-div.navigation a.logo { /* Логотип в навигации */
-    margin-right: 1rem; /* Добавляет отступ справа */
-    z-index: 4; /* Устанавливает уровень наложения */
-}
-
-div.menu { /* Меню в навигации */
-    background-color: white; /* Устанавливает белый фон */
-    display: flex; /* Использует flexbox */
-    flex-direction: row; /* Элементы в ряд */
-    justify-content: space-around; /* Распределяет элементы равномерно */
-    box-shadow: var(--shadow-1-elevation-medium); /* Добавляет среднюю тень */
-    border-radius: 100px; /* Делает углы круглыми */
-    height: 70px; /* Устанавливает высоту */
-    width: 70vw; /* Устанавливает ширину 70% от окна */
-}
-
-div.navigation a,
-div.navigation a:any-link, /* Стиль для всех ссылок */
-div.navigation a:visited { /* Стиль для посещенных ссылок */
-    color: var(--green); /* Устанавливает зеленый цвет */
-    font-family: 'Cormorant Garamond', serif; /* Устанавливает шрифт */
-    font-size: 1.4em; /* Устанавливает размер шрифта */
-    text-decoration: none; /* Убирает подчеркивание */
-    font-weight: 500; /* Устанавливает среднюю толщину шрифта */
-    border-bottom: solid 1px transparent; /* Прозрачная нижняя линия */
-    transition: all 1s ease-in-out; /* Плавное изменение стилей */
-}
-
-div.navigation .menu a:hover { /* Эффект при наведении на ссылки в меню */
-    border-bottom: solid 1px var(--green); /* Добавляет зеленую линию */
-}
-
-div.navigation a.logo:hover { /* Эффект при наведении на логотип */
-    border-bottom: solid 1px transparent; /* Убирает линию */
-}
-
-div.navigation .test { /* Тестовый элемент в навигации */
-    opacity: 0; /* Скрывает элемент изначально */
-    pointer-events: none; /* Отключает взаимодействие с мышью */
-    display: flex; /* Использует flexbox */
-    background-color: white; /* Устанавливает белый фон */
-    width: 100%; /* Устанавливает ширину 100% */
-    height: 100%; /* Устанавливает высоту 100% */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0; /* Прижимает к верху */
-    z-index: 5; /* Устанавливает высокий уровень наложения */
-    border-radius: 100px; /* Делает углы круглыми */
-    flex-direction: row; /* Элементы в ряд */
-    justify-content: left; /* Выравнивает влево */
-    box-shadow: var(--shadow-1-elevation-high); /* Добавляет высокую тень */
-    transition: all 0.8s ease-in-out; /* Плавное появление */
-}
-
-div.navigation .test div { /* Внутренний див в тесте */
-    text-align: center; /* Центрирует текст */
-    width: 100%; /* Устанавливает ширину 100% */
-}
-
-div.navigation .test div p { /* Текст внутри теста */
-    color: var(--green); /* Устанавливает зеленый цвет */
-}
-
-div.navigation a.logo:hover .test { /* Показывает тест при наведении на логотип */
-    opacity: 100%; /* Делает элемент видимым */
-}
-
-.internal section.hero { /* Секция hero на внутренних страницах */
-    padding: 0em 10em; /* Устанавливает отступы слева и справа */
-}
-
-.internal h1 { /* Заголовки h1 на внутренних страницах */
-    z-index: 1; /* Устанавливает уровень наложения */
-}
-
-/* Секция размещения */
-#accomodations .bigtext { /* Текст в секции размещения */
-    margin-bottom: 3rem; /* Добавляет отступ снизу */
-}
-
-.columns { /* Контейнер для колонок */
-    display: flex; /* Использует flexbox */
-    flex-direction: row; /* Элементы в ряд */
-    width: 100%; /* Устанавливает ширину 100% */
-}
-
-.column { /* Каждая колонка */
-    display: flex; /* Использует flexbox */
-    flex-direction: column; /* Элементы в колонку */
-    width: 50%; /* Устанавливает ширину 50% */
-    padding: 0 2.5em; /* Добавляет отступы слева и справа */
-}
-
-p.smalldetail { /* Текст с классом smalldetail */
-    font-family: 'Work Sans', sans-serif; /* Устанавливает шрифт */
-    font-size: 1rem; /* Устанавливает размер шрифта */
-    font-weight: 200; /* Устанавливает легкую толщину шрифта */
-}
-
-.column h3 { /* Заголовки h3 в колонках */
-    font-size: 2.5rem; /* Устанавливает размер шрифта */
-}
-
-p.description { /* Текст описания */
-    font-size: 1.5rem; /* Устанавливает размер шрифта */
-    font-family: 'Work Sans', sans-serif; /* Устанавливает шрифт */
-    font-weight: 200; /* Устанавливает легкую толщину шрифта */
-}
-
-.column a { /* Ссылки в колонках */
-    color: var(--green); /* Устанавливает зеленый цвет */
-    text-decoration: none; /* Убирает подчеркивание */
-    margin-top: 2rem; /* Добавляет отступ сверху */
-}
-
-#location .description { /* Описание в секции location */
-    width: 90%; /* Устанавливает ширину 90% */
-    line-height: 1.8rem; /* Устанавливает высоту строки */
-}
-
-#location .description a { /* Ссылки в описании location */
-    font-size: 1.5rem; /* Устанавливает размер шрифта */
-    font-family: 'Work Sans', sans-serif; /* Устанавливает шрифт */
-    transition: all 0.5s ease-in-out; /* Плавное изменение стилей */
-    color: var(--green); /* Устанавливает зеленый цвет */
-    border-bottom: solid 0px transparent; /* Прозрачная нижняя граница */
-    text-decoration: underline; /* Добавляет подчеркивание */
-}
-
-#location .description a:hover { /* Эффект при наведении на ссылки */
-    color: var(--red); /* Меняет цвет на красный */
-}
-
-#location .column img { /* Изображения в колонках location */
-    width: 100%; /* Устанавливает ширину 100% */
-}
-
-.icon { /* Иконки */
-    width: 25px; /* Устанавливает ширину 25 пикселей */
-}
-
-/* Секция медового месяца */
-.honeymoon hero {
-    padding: 0em 13em; /* Устанавливает отступы слева и справа */
-}
-.honeymoon div.navigation { /* Навигация в секции honeymoon */
-    width: 80vw; /* Устанавливает ширину 80% от окна */
-    justify-content: space-between; /* Распределяет элементы с равными промежутками */
-}
-.honeymoon h1 { /* Заголовки h1 в секции honeymoon */
-    margin-bottom: 4rem; /* Добавляет отступ снизу */
-}
-
-.honeymoon span.iban { /* Текст с классом iban */
-    display: block; /* Отображает как блочный элемент */
-    font-size: 2rem; /* Устанавливает размер шрифта */
-    margin-bottom: 1rem; /* Добавляет отступ снизу */
-}
-
-.honeymoon span.iban_details { /* Детали текста iban */
-    display: block; /* Отображает как блочный элемент */
-    font-size: 1.5rem; /* Устанавливает размер шрифта */
-}
-
-/* Секция выделения текста */
-::-moz-selection { /* Выделение текста для Firefox */
-    /* Специальная команда для Firefox */
-    background: var(--yellow-down); /* Устанавливает желтый фон */
-}
-
-::selection { /* Выделение текста для других браузеров */
-    background: var(--yellow-down); /* Устанавливает желтый фон */
-}
-
-/* Секция анимаций */
-.arrow-bounce {
-    position: absolute; /* Устанавливает абсолютное позиционирование */
-    color: var(--light-green); /* Устанавливает зеленый цвет */
-    bottom: 2rem; /* Отступ снизу */
-}
-
-.arrow-bounce i { /* Иконка внутри стрелки */
-    opacity: 30%; /* Устанавливает прозрачность 30% */
-}
-
-/* Анимация "фокус-в" */
-.focus-in {
-    -webkit-animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530); /* Анимация для Webkit */
-    animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530); /* Анимация для всех браузеров */
-}
-
-@-webkit-keyframes focus-in { /* Определение анимации для Webkit */
     0% {
-        -webkit-filter: blur(12px); /* Начинает с размытия */
-        filter: blur(12px); /* Размытие для всех */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg);
+        transform: translate(1000px, -1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-filter: blur(0px); /* Убирает размытие */
-        filter: blur(0px); /* Убирает размытие для всех */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes focus-in { /* Определение анимации для всех браузеров */
-    0% {
-        -webkit-filter: blur(12px); /* Начинает с размытия */
-        filter: blur(12px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-filter: blur(0px); /* Убирает размытие */
-        filter: blur(0px); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Анимация "скольжение с размытием сверху" */
-.slide-in-blurred-top {
-    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-/* Информация о создании анимации (оставлена как комментарий) */
-/* ----------------------------------------------
- * Generated by Animista on 2021-12-21 12:16:23
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-in-blurred-top
- * ----------------------------------------
- */
-@-webkit-keyframes slide-in-blurred-top { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вверх */
-        transform: translateY(-1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 0%; /* Точка начала вверху */
-        transform-origin: 50% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-top { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translateY(-1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вверх */
-        transform: translateY(-1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 0%; /* Точка начала */
-        transform-origin: 50% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Анимация "скольжение с размытием снизу" */
-.slide-in-blurred-bottom {
-    -webkit-animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-@-webkit-keyframes slide-in-blurred-bottom { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вниз */
-        transform: translateY(1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 100%; /* Точка начала внизу */
-        transform-origin: 50% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-bottom { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translateY(1000px) scaleY(1) scaleX(1); /* Начинает с перемещения вниз */
-        transform: translateY(1000px) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 100%; /* Точка начала */
-        transform-origin: 50% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1); /* Возвращает на место */
-        transform: translateY(0) scaleY(1) scaleX(1); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Анимация "скольжение с размытием сверху-справа" */
-.slide-in-blurred-tr {
-    -webkit-animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-tr 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
-}
-
-@-webkit-keyframes slide-in-blurred-tr { /* Анимация для Webkit */
-    0% {
-        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg); /* Начинает с правого верхнего угла */
-        transform: translate(1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 0%; /* Точка начала в левом верхнем углу */
-        transform-origin: 0% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-@keyframes slide-in-blurred-tr { /* Анимация для всех браузеров */
-    0% {
-        -webkit-transform: translate(1000px, -1000px) skew(0deg, 0deg); /* Начинает с правого верхнего угла */
-        transform: translate(1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 0%; /* Точка начала */
-        transform-origin: 0% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
-    }
-    100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
-    }
-}
-
-/* Анимация "скольжение с размытием снизу-справа" */
 .slide-in-blurred-br {
-    -webkit-animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
+    -webkit-animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-br 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-/* Информация о создании анимации (оставлена как комментарий) */
 /* ----------------------------------------------
  * Generated by Animista on 2021-12-21 12:21:55
  * Licensed under FreeBSD License.
@@ -2298,990 +847,532 @@ p.description { /* Текст описания */
  * animation slide-in-blurred-br
  * ----------------------------------------
  */
-@-webkit-keyframes slide-in-blurred-br { /* Анимация для Webkit */
+@-webkit-keyframes slide-in-blurred-br {
     0% {
-        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg); /* Начинает с правого нижнего угла */
-        transform: translate(1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 100%; /* Точка начала внизу слева */
-        transform-origin: 0% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg);
+        transform: translate(1000px, 1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-br { /* Анимация для всех браузеров */
+@keyframes slide-in-blurred-br {
     0% {
-        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg); /* Начинает с правого нижнего угла */
-        transform: translate(1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 0% 100%; /* Точка начала */
-        transform-origin: 0% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(1000px, 1000px) skew(0deg, 0deg);
+        transform: translate(1000px, 1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-/* Анимация "скольжение с размытием снизу-слева" */
 .slide-in-blurred-bl {
-    -webkit-animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
+    -webkit-animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@-webkit-keyframes slide-in-blurred-bl { /* Анимация для Webkit */
+@-webkit-keyframes slide-in-blurred-bl {
     0% {
-        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* Начинает с левого нижнего угла */
-        transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 100%; /* Точка начала внизу справа */
-        transform-origin: 100% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg);
+        transform: translate(-1000px, 1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-bl { /* Анимация для всех браузеров */
+@keyframes slide-in-blurred-bl {
     0% {
-        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* Начинает с левого нижнего угла */
-        transform: translate(-1000px, 1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 100%; /* Точка начала */
-        transform-origin: 100% 100%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(-1000px, 1000px) skew(0deg, 0deg);
+        transform: translate(-1000px, 1000px) skew(0deg, 0deg);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-/* Анимация "скольжение с размытием сверху-слева" */
 .slide-in-blurred-tl {
-    -webkit-animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для Webkit */
-    animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; /* Анимация для всех */
+    -webkit-animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-tl 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@-webkit-keyframes slide-in-blurred-tl { /* Анимация для Webkit */
+@-webkit-keyframes slide-in-blurred-tl {
     0% {
-        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* Начинает с левого верхнего угла */
-        transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 0%; /* Точка начала вверху справа */
-        transform-origin: 100% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg);
+        ;
+        transform: translate(-1000px, -1000px) skew(0deg, 0deg);
+        ;
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-tl { /* Анимация для всех браузеров */
+@keyframes slide-in-blurred-tl {
     0% {
-        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* Начинает с левого верхнего угла */
-        transform: translate(-1000px, -1000px) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 100% 0%; /* Точка начала */
-        transform-origin: 100% 0%; /* То же для всех */
-        -webkit-filter: blur(40px); /* Сильное размытие */
-        filter: blur(40px); /* Размытие */
-        opacity: 0; /* Невидимый */
+        -webkit-transform: translate(-1000px, -1000px) skew(0deg, 0deg);
+        ;
+        transform: translate(-1000px, -1000px) skew(0deg, 0deg);
+        ;
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
     }
+
     100% {
-        -webkit-transform: translate(0, 0) skew(0deg, 0deg); /* Возвращает на место */
-        transform: translate(0, 0) skew(0deg, 0deg); /* То же для всех */
-        -webkit-transform-origin: 50% 50%; /* Точка центра */
-        transform-origin: 50% 50%; /* То же для всех */
-        -webkit-filter: blur(0); /* Убирает размытие */
-        filter: blur(0); /* Убирает размытие */
-        opacity: 1; /* Полностью видимый */
+        -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+        transform: translate(0, 0) skew(0deg, 0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
     }
 }
+
+
+
+
 /** Delay **/
 
-/* Устанавливает задержку анимации 0 секунд для класса del-0 */
 .del-0 {
-    animation-delay: 0s; /* Анимация начинается сразу */
+    animation-delay: 0s;
 }
 
-/* Устанавливает задержку анимации 0.25 секунды для класса del-025 */
 .del-025 {
-    animation-delay: 0.25s; /* Анимация начинается через 0.25 секунды */
+    animation-delay: 0.25s;
 }
 
-/* Устанавливает задержку анимации 0.50 секунды для класса del-050 */
 .del-050 {
-    animation-delay: 0.50s; /* Анимация начинается через 0.5 секунды */
+    animation-delay: 0.50s;
 }
 
-/* Устанавливает задержку анимации 0.75 секунды для класса del-075 */
 .del-075 {
-    animation-delay: 0.75s; /* Анимация начинается через 0.75 секунды */
+    animation-delay: 0.75s;
 }
 
-/* Устанавливает задержку анимации 1 секунду для класса del-1 */
 .del-1 {
-    animation-delay: 1s; /* Анимация начинается через 1 секунду */
+    animation-delay: 1s;
 }
 
-/* Устанавливает задержку анимации 1.25 секунды для класса del-125 */
 .del-125 {
-    animation-delay: 1.25s; /* Анимация начинается через 1.25 секунды */
+    animation-delay: 1.25s;
 }
 
-/* Устанавливает задержку анимации 1.50 секунды для класса del-150 */
 .del-150 {
-    animation-delay: 1.50s; /* Анимация начинается через 1.5 секунды */
+    animation-delay: 1.50s;
 }
 
-/* Устанавливает задержку анимации 1.75 секунды для класса del-175 */
 .del-175 {
-    animation-delay: 1.75s; /* Анимация начинается через 1.75 секунды */
+    animation-delay: 1.75s;
 }
 
-/* Устанавливает задержку анимации 2 секунды для класса del-2 */
 .del-2 {
-    animation-delay: 2s; /* Анимация начинается через 2 секунды */
+    animation-delay: 2s;
 }
 
-/* Устанавливает задержку анимации 2.25 секунды для класса del-225 */
 .del-225 {
-    animation-delay: 2.25s; /* Анимация начинается через 2.25 секунды */
+    animation-delay: 2.25s;
 }
 
-/* Устанавливает задержку анимации 2.50 секунды для класса del-250 */
 .del-250 {
-    animation-delay: 2.50s; /* Анимация начинается через 2.5 секунды */
+    animation-delay: 2.50s;
 }
 
-/* Устанавливает задержку анимации 2.75 секунды для класса del-275 */
 .del-275 {
-    animation-delay: 2.75s; /* Анимация начинается через 2.75 секунды */
+    animation-delay: 2.75s;
 }
 
-/* Устанавливает задержку анимации 3 секунды для класса del-3 */
 .del-3 {
-    animation-delay: 3s; /* Анимация начинается через 3 секунды */
+    animation-delay: 3s;
 }
 
-/* Устанавливает задержку анимации 3.25 секунды для класса del-325 */
 .del-325 {
-    animation-delay: 3.25s; /* Анимация начинается через 3.25 секунды */
+    animation-delay: 3.25s;
 }
 
-/* Устанавливает задержку анимации 3.50 секунды для класса del-350 */
 .del-350 {
-    animation-delay: 3.50s; /* Анимация начинается через 3.5 секунды */
+    animation-delay: 3.50s;
 }
 
-/* Устанавливает задержку анимации 3.75 секунды для класса del-375 */
 .del-375 {
-    animation-delay: 3.75s; /* Анимация начинается через 3.75 секунды */
+    animation-delay: 3.75s;
 }
 
-/* Устанавливает задержку анимации 4 секунды для класса del-4 */
 .del-4 {
-    animation-delay: 4s; /* Анимация начинается через 4 секунды */
+    animation-delay: 4s;
 }
 
 /** Duration **/
 
-/* Устанавливает длительность анимации 0 секунд для класса dur-0 */
 .dur-0 {
-    animation-duration: 0s; /* Анимация длится 0 секунд (нет анимации) */
+    animation-duration: 0s;
 }
 
-/* Устанавливает длительность анимации 0.25 секунды для класса dur-025 */
 .dur-025 {
-    animation-duration: 0.25s; /* Анимация длится 0.25 секунды */
+    animation-duration: 0.25s;
 }
 
-/* Устанавливает длительность анимации 0.50 секунды для класса dur-050 */
 .dur-050 {
-    animation-duration: 0.50s; /* Анимация длится 0.5 секунды */
+    animation-duration: 0.50s;
 }
 
-/* Устанавливает длительность анимации 0.75 секунды для класса dur-075 */
 .dur-075 {
-    animation-duration: 0.75s; /* Анимация длится 0.75 секунды */
+    animation-duration: 0.75s;
 }
 
-/* Устанавливает длительность анимации 1 секунду для класса dur-1 */
 .dur-1 {
-    animation-duration: 1s; /* Анимация длится 1 секунду */
+    animation-duration: 1s;
 }
 
-/* Устанавливает длительность анимации 1.25 секунды для класса dur-125 */
 .dur-125 {
-    animation-duration: 1.25s; /* Анимация длится 1.25 секунды */
+    animation-duration: 1.25s;
 }
 
-/* Устанавливает длительность анимации 1.50 секунды для класса dur-150 */
 .dur-150 {
-    animation-duration: 1.50s; /* Анимация длится 1.5 секунды */
+    animation-duration: 1.50s;
 }
 
-/* Устанавливает длительность анимации 1.75 секунды для класса dur-175 */
 .dur-175 {
-    animation-duration: 1.75s; /* Анимация длится 1.75 секунды */
+    animation-duration: 1.75s;
 }
 
-/* Устанавливает длительность анимации 2 секунды для класса dur-2 */
 .dur-2 {
-    animation-duration: 2s; /* Анимация длится 2 секунды */
+    animation-duration: 2s;
 }
 
-/* Устанавливает длительность анимации 2.25 секунды для класса dur-225 */
 .dur-225 {
-    animation-duration: 2.25s; /* Анимация длится 2.25 секунды */
+    animation-duration: 2.25s;
 }
 
-/* Устанавливает длительность анимации 2.50 секунды для класса dur-250 */
 .dur-250 {
-    animation-duration: 2.50s; /* Анимация длится 2.5 секунды */
+    animation-duration: 2.50s;
 }
 
-/* Устанавливает длительность анимации 2.75 секунды для класса dur-275 */
 .dur-275 {
-    animation-duration: 2.75s; /* Анимация длится 2.75 секунды */
+    animation-duration: 2.75s;
 }
 
-/* Устанавливает длительность анимации 3 секунды для класса dur-3 */
 .dur-3 {
-    animation-duration: 3s; /* Анимация длится 3 секунды */
+    animation-duration: 3s;
 }
 
-/* Устанавливает длительность анимации 3.25 секунды для класса dur-325 */
 .dur-325 {
-    animation-duration: 3.25s; /* Анимация длится 3.25 секунды */
+    animation-duration: 3.25s;
 }
 
-/* Устанавливает длительность анимации 3.50 секунды для класса dur-350 */
 .dur-350 {
-    animation-duration: 3.50s; /* Анимация длится 3.5 секунды */
+    animation-duration: 3.50s;
 }
 
-/* Устанавливает длительность анимации 3.75 секунды для класса dur-375 */
 .dur-375 {
-    animation-duration: 3.75s; /* Анимация длится 3.75 секунды */
+    animation-duration: 3.75s;
 }
 
-/* Устанавливает длительность анимации 4 секунды для класса dur-4 */
 .dur-4 {
-    animation-duration: 4s; /* Анимация длится 4 секунды */
+    animation-duration: 4s;
 }
 
 /***
 RESPONSIVENESS
 ***/
-
-/* Применяет стили, если ширина экрана меньше или равна 1200px */
 @media (max-width: 1200px) {
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 4rem; /* Уменьшает размер текста до 4rem */
+    .home h1 {
+        font-size: 4rem;
     }
 }
 
-/* Применяет стили, если ширина экрана меньше или равна 992px */
 @media (max-width: 992px) {
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 2.5rem; /* Уменьшает размер текста до 2.5rem */
+    .home h1 {
+        font-size: 2.5rem;
     }
 
-    .home .hero .img-top.img-left { /* Левое верхнее изображение в секции hero */
-        height: 40vh; /* Устанавливает высоту 40% от высоты экрана */
+    .home .hero .img-top.img-left {
+        height: 40vh;
     }
 
-    .home .hero .img-top.img-right { /* Правое верхнее изображение в секции hero */
-        height: 40vh; /* Устанавливает высоту 40% от высоты экрана */
+    .home .hero .img-top.img-right {
+        height: 40vh;
     }
 
-    .home .hero .img-bottom.img-left { /* Левое нижнее изображение в секции hero */
-        height: 50vh; /* Устанавливает высоту 50% от высоты экрана */
+    .home .hero .img-bottom.img-left {
+        height: 50vh;
     }
 
-    .home .hero .img-bottom.img-right { /* Правое нижнее изображение в секции hero */
-        height: 50vh; /* Устанавливает высоту 50% от высоты экрана */
+    .home .hero .img-bottom.img-right {
+        height: 50vh;
     }
 
-    h1, /* Все заголовки h1 */
-    p.bigtext { /* Текст с классом bigtext */
-        font-size: 3rem; /* Уменьшает размер текста до 3rem */
+    h1,
+    p.bigtext {
+        font-size: 3rem;
     }
 
-    .video iframe { /* Видео в секции video */
-        width: 900px; /* Устанавливает ширину 900 пикселей */
-        height: 506px; /* Устанавливает высоту 506 пикселей */
+    .video iframe {
+        width: 900px;
+        height: 506px;
     }
 
-    section.standard { /* Стандартные секции */
-        padding: 8rem; /* Устанавливает внутренние отступы 8rem */
+    section.standard {
+        padding: 8rem;
     }
 }
 
-/* Применяет стили, если ширина экрана меньше или равна 768px */
 @media (max-width: 768px) {
-    h1, /* Все заголовки h1 */
-    p.bigtext, /* Текст с классом bigtext */
-    p.hugetext { /* Текст с классом hugetext */
-        font-size: 2rem; /* Уменьшает размер текста до 2rem */
+
+    h1,
+    p.bigtext,
+    p.hugetext {
+        font-size: 2rem;
     }
 
-    .internal section.hero { /* Секция hero на внутренних страницах */
-        padding: 0 5rem; /* Устанавливает отступы слева и справа 5rem */
+    .internal section.hero {
+        padding: 0 5rem;
     }
 
-    .internal .hero .img-bottom.img-right { /* Правое нижнее изображение в hero */
-        height: 65vw; /* Устанавливает высоту 65% от ширины экрана */
-        width: auto; /* Автоматическая ширина */
+    .internal .hero .img-bottom.img-right {
+        height: 65vw;
+        width: auto;
     }
 
-    section.standard { /* Стандартные секции */
-        padding: 5rem; /* Устанавливает внутренние отступы 5rem */
+    section.standard {
+        padding: 5rem;
     }
 
-    section.video img.img-top.img-left { /* Левое верхнее изображение в секции video */
-        height: 40vw; /* Устанавливает высоту 40% от ширины экрана */
+    section.video img.img-top.img-left {
+        height: 40vw;
     }
 
-    section.video img.img-top.img-right { /* Правое верхнее изображение в секции video */
-        height: 60vw; /* Устанавливает высоту 60% от ширины экрана */
+    section.video img.img-top.img-right {
+        height: 60vw;
     }
 
-    section.video img.img-bottom.img-left { /* Левое нижнее изображение в секции video */
-        height: 50vw; /* Устанавливает высоту 50% от ширины экрана */
+    section.video img.img-bottom.img-left {
+        height: 50vw;
     }
 
-    section.video img.img-bottom.img-right { /* Правое нижнее изображение в секции video */
-        height: 25vw; /* Устанавливает высоту 25% от ширины экрана */
+    section.video img.img-bottom.img-right {
+        height: 25vw;
     }
 
-    .video iframe { /* Видео в секции video */
-        width: 600px; /* Устанавливает ширину 600 пикселей */
-        height: 338px; /* Устанавливает высоту 338 пикселей */
+    .video iframe {
+        width: 600px;
+        height: 338px;
     }
 
-    .columns { /* Блочные колонки */
-        flex-direction: column; /* Меняет расположение на столбец */
+    .columns {
+        flex-direction: column;
     }
 
-    .columns .column:first-child { /* Первая колонка в блоке */
-        margin-bottom: 8rem; /* Добавляет отступ снизу 8rem */
+    .columns .column:first-child {
+        margin-bottom: 8rem;
     }
 
-    .column { /* Все колонки */
-        padding: 0rem; /* Убирает внутренние отступы */
-        width: 100%; /* Устанавливает ширину 100% */
+    .column {
+        padding: 0rem;
+        width: 100%;
     }
-    .logo div.test { /* Тестовый див внутри логотипа */
-        display: none; /* Скрывает этот элемент */
+    .logo div.test {
+        display: none;
     }
 
-    .honeymoon span.iban { /* Текст с классом iban в секции honeymoon */
-        font-size: 1.5rem; /* Уменьшает размер шрифта до 1.5rem */
+    .honeymoon span.iban {
+        font-size: 1.5rem;
     }
-    .honeymoon span.iban_details { /* Детали текста iban */
-        font-size: 1.2rem; /* Уменьшает размер шрифта до 1.2rem */
+    .honeymoon span.iban_details {
+        font-size: 1.2rem;
     }
+
 }
 
-/* Применяет стили, если ширина экрана меньше или равна 576px */
 @media (max-width: 576px) {
-    .home section.hero .img-top.img-left { /* Левое верхнее изображение в hero */
-        height: 35vw; /* Устанавливает высоту 35% от ширины экрана */
+    .home section.hero .img-top.img-left {
+        height: 35vw;
     }
 
-    .home section.hero .img-top.img-right { /* Правое верхнее изображение в hero */
-        height: 40vw; /* Устанавливает высоту 40% от ширины экрана */
+    .home section.hero .img-top.img-right {
+        height: 40vw;
     }
 
-    .home section.hero .img-bottom.img-left { /* Левое нижнее изображение в hero */
-        height: 0vw; /* Устанавливает высоту 0% (скрывает) */
+    .home section.hero .img-bottom.img-left {
+        height: 0vw;
     }
 
-    .home section.hero .img-bottom.img-right { /* Правое нижнее изображение в hero */
-        height: 75vw; /* Устанавливает высоту 75% от ширины экрана */
+    .home section.hero .img-bottom.img-right {
+        height: 75vw;
     }
 
-    .home h1 { /* Заголовок на главной странице */
-        font-size: 2rem; /* Уменьшает размер шрифта до 2rem */
+    .home h1 {
+        font-size: 2rem;
     }
 
-    .home .bounce { /* Элемент с классом bounce */
-        display: none; /* Скрывает элемент */
+    .home .bounce {
+        display: none;
     }
 
-    .home div.rsvp { /* Блок RSVP на главной */
-        right: 1rem; /* Отступ справа 1rem */
-        bottom: 1rem; /* Отступ снизу 1rem */
-        z-index: 4; /* Устанавливает уровень наложения */
+    .home div.rsvp {
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 4;
     }
 
-    .internal .navigation { /* Навигация на внутренних страницах */
-        position: fixed; /* Фиксирует навигацию при прокрутке */
+    .internal .navigation {
+        position: fixed;
     }
 
-    .internal .logo { /* Логотип на внутренних страницах */
-        position: fixed; /* Фиксирует логотип */
-        top: 1rem; /* Отступ сверху 1rem */
-        left: 1rem; /* Отступ слева 1rem */
+    .internal .logo {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
     }
 
-    .internal .rsvp { /* Кнопка RSVP на внутренних страницах */
-        position: fixed; /* Фиксирует кнопку */
-        top: 1rem; /* Отступ сверху 1rem */
-        right: 1rem; /* Отступ справа 1rem */
+    .internal .rsvp {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
     }
 
-    .internal .menu { /* Меню на внутренних страницах */
-        width: 90vw; /* Ширина 90% от окна */
-        font-size: 0.9rem; /* Уменьшает размер шрифта */
-        height: 50px; /* Устанавливает высоту 50 пикселей */
+    .internal .menu {
+        width: 90vw;
+        font-size: 0.9rem;
+        height: 50px;
     }
 
-    .video iframe { /* Видео в секции video */
-        width: 500px; /* Устанавливает ширину 500 пикселей */
-        height: 280px; /* Устанавливает высоту 280 пикселей */
+    .video iframe {
+        width: 500px;
+        height: 280px;
     }
 
-    .home section.gift .img-bottom.img-left { /* Левое нижнее изображение в секции gift */
-        height: 0vw; /* Устанавливает высоту 0% (скрывает) */
+    .home section.gift .img-bottom.img-left {
+        height: 0vw;
     }
-    .home section.gift .img-bottom.img-right { /* Правое нижнее изображение в секции gift */
-        height: 70vw; /* Устанавливает высоту 70% от ширины окна */
-    }
-}
-
-/* Стили для телефонных ссылок */
-a[href^="tel"] { /* Ссылки, начинающиеся с "tel" (телефонные номера) */
-    color: inherit; /* Наследует цвет от родителя */
-    text-decoration: none; /* Убирает подчеркивание */
-}
-
-
-
-
-
-
-
-/* Стили для плавного появления текста */
-/* Начало 2 блока стилей для анимации текста */
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.fade-in-text {
-    /* Устанавливает начальную видимость текста как полностью невидимую до прокрутки */
-    opacity: 0;
-}
-
-.fade-in-paragraph {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 1.6s ease, transform 2.3s ease;
-}
-.fade-in-paragraph.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Определяет анимацию fadeIn с романтичным эффектом */
-@keyframes fadeIn {
-    /* Начальное состояние анимации */
-    0% {
-        /* Начинает с полной невидимости */
-        opacity: 0;
-        /* Сдвигает текст вниз на 20 пикселей */
-        transform: translateY(20px);
-        /* Добавляет лёгкое размытие для мягкости */
-        filter: blur(5px);
-    }
-    /* Среднее состояние для плавности */
-    50% {
-        /* Половина видимости */
-        opacity: 0.5;
-        /* Чуть поднимает текст */
-        transform: translateY(10px);
-        /* Уменьшает размытие */
-        filter: blur(2px);
-    }
-    /* Конечное состояние анимации */
-    100% {
-        /* Завершает с полной видимостью */
-        opacity: 1;
-        /* Возвращает текст в исходное положение */
-        transform: translateY(0);
-        /* Убирает размытие полностью */
-        filter: blur(0);
+    .home section.gift .img-bottom.img-right {
+        height: 70vw;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Стили для секции выбора, соответствующей стилю секции hero */
-#choice {
-  background-color: var(--beige); /* Бежевый фон для единообразия с hero */
-  min-height: 100vh; /* Полноэкранная высота секции */
-  padding: 2rem; /* Внутренние отступы для контента */
-  position: relative; /* Относительное позиционирование для декоративных изображений */
-  display: flex; /* Гибкая компоновка для центрирования содержимого */
-  flex-direction: column; /* Элементы располагаются вертикально */
-  justify-content: center; /* Центрирование содержимого по вертикали */
-  align-items: center; /* Центрирование содержимого по горизонтали */
-  overflow: hidden; /* Скрытие содержимого за пределами секции */
-  scroll-snap-align: start; /* Привязка прокрутки к началу секции */
-  z-index: 12; /* Уровень наложения выше других элементов */
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
 }
 
-/* Контейнер для заголовка и кнопок секции выбора */
-.choice-content {
-  text-align: center; /* Центрирование текста и кнопок */
-  max-width: 800px; /* Ограничение максимальной ширины содержимого */
-  z-index: 2; /* Позиционирование выше декоративных изображений */
-}
 
-/* Заголовок секции выбора */
-#choice .choice-title {
-  font-family: 'Amalfi-Coast', serif; /* Шрифт, соответствующий hero */
-  font-size: 3rem; /* Размер шрифта, аналогичный hero */
-  color: var(--text); /* Цвет текста из переменной */
-  margin-bottom: 1rem; /* Отступ снизу для разделения с кнопками */
-}
-
-/* Контейнер для кнопок выбора */
-#choice .choice-buttons {
-  display: flex; /* Гибкая компоновка для расположения кнопок */
-  justify-content: center; /* Центрирование кнопок по горизонтали */
-  gap: 1.5rem; /* Расстояние между кнопками */
-  flex-wrap: wrap; /* Перенос кнопок на новую строку при нехватке места */
-}
-
-/* Стили для кнопок выбора */
-#choice .choice-btn {
-  font-family: 'Work Sans', sans-serif; /* Шрифт кнопок, соответствующий другим кнопкам */
-  font-size: 1.1rem; /* Размер шрифта кнопок */
-  padding: 20px 30px; /* Внутренние отступы для удобного размера */
-  background-color: var(--green); /* Зеленый фон кнопки */
-  color: white; /* Белый цвет текста */
-  border: none; /* Удаление границы */
-  border-radius: 500px; /* Закругленные углы */
-  box-shadow: var(--shadow-1-elevation-medium); /* Средняя тень для объема */
-  transition: all 0.3s ease-in-out; /* Плавные переходы для всех свойств */
-  min-height: 44px; /* Минимальная высота для сенсорных устройств */
-  min-width: 44px; /* Минимальная ширина для сенсорных устройств */
-  cursor: pointer; /* Курсор в виде указателя при наведении */
-}
-
-/* Эффект наведения на кнопки */
-#choice .choice-btn:hover {
-  background-color: var(--red); /* Красный фон при наведении */
-  transform: scale(1.05); /* Легкое увеличение размера */
-  box-shadow: var(--shadow-1-elevation-high); /* Усиленная тень при наведении */
-}
-
-/* Декоративные изображения в углах и по центру */
-#choice .img-over {
-  position: absolute; /* Абсолютное позиционирование для углов */
-  pointer-events: none; /* Отключение взаимодействия с изображениями */
-  z-index: 1; /* Позиционирование ниже текста */
-  image-rendering: -webkit-optimize-contrast; /* Оптимизация резкости изображений */
-}
-
-/* Верхнее левое изображение */
-#choice .img-top.img-left {
-  top: 0; /* Выравнивание по верхнему краю */
-  left: 0; /* Выравнивание по левому краю */
-  height: 40vh; /* Размер, соответствующий верхним изображениям hero */
-}
-
-/* Верхнее правое изображение */
-#choice .img-top.img-right {
-  top: 0; /* Выравнивание по верхнему краю */
-  right: 0; /* Выравнивание по правому краю */
-  height: 45vh; /* Размер, соответствующий верхним изображениям hero */
-}
-
-/* Нижнее левое изображение */
-#choice .img-bottom.img-left {
-  bottom: 0; /* Выравнивание по нижнему краю */
-  left: 0; /* Выравнивание по левому краю */
-  height: 90vh; /* Размер, соответствующий нижним изображениям hero */
-}
-
-/* Правое центральное изображение */
-#choice .img-right {
-  top: 12%; /* Центрирование по вертикали */
-  right: 0; /* Выравнивание по правому краю */
-  transform: translateY(-50%); /* Смещение для точного центрирования */
-  height: 90vh; /* Единый размер изображения */
-}
-
-/* Удаление псевдоэлемента ::before и img-remark */
-#choice::before,
-#choice .img-remark {
-  display: none; /* Скрытие фонового изображения и remark-top */
-}
-
-/* Стили для секции с фотографиями */
-#photo-section {
-  background-color: var(--beige); /* Бежевый фон, как в hero */
-  min-height: 100vh; /* Полноэкранная высота секции */
-  padding: 2rem; /* Внутренние отступы для контента */
-  display: flex; /* Гибкая компоновка для центрирования */
-  flex-direction: column; /* Вертикальное расположение элементов */
-  align-items: center; /* Горизонтальное центрирование */
-  justify-content: center; /* Вертикальное центрирование */
-  position: relative; /* Относительное позиционирование для декораций */
-  scroll-snap-align: start; /* Привязка прокрутки к началу секции */
-}
-
-/* Заголовок секции с фотографиями */
-#photo-section h2 {
-  font-family: 'Cormorant Garamond', serif; /* Шрифт для согласованности */
-  font-size: 2.5rem; /* Размер заголовка */
-  color: var(--text); /* Цвет текста из переменной */
-  margin-bottom: 2rem; /* Отступ снизу для разделения */
-  text-align: center; /* Центрирование текста */
-}
-
-/* Сетка для галереи фотографий */
-.photo-gallery {
-  display: grid; /* Сеточная компоновка */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивные колонки с минимальной шириной 150px */
-  gap: 1rem; /* Расстояние между изображениями */
-  width: 90%; /* Ограничение ширины галереи */
-  max-width: 1000px; /* Максимальная ширина галереи */
-}
-
-/* Изображения в галерее */
-.photo-gallery img {
-  width: 100%; /* Полная ширина изображения */
-  height: auto; /* Сохранение пропорций */
-  border-radius: 8px; /* Закругленные углы */
-  box-shadow: var(--shadow-1-elevation-low); /* Легкая тень для объема */
-  border: 2px solid var(--light-green); /* Зеленая рамка */
-  transition: transform 0.3s ease-in-out; /* Плавный эффект наведения */
-}
-
-/* Эффект наведения на изображения галереи */
-.photo-gallery img:hover {
-  transform: scale(1.05); /* Легкое увеличение размера */
-  box-shadow: var(--shadow-1-elevation-high); /* Усиленная тень при наведении */
-}
-
-/* Адаптивные стили для экранов с шириной до 992px */
-@media (max-width: 992px) {
-  /* Уменьшение размера заголовка в секции выбора */
-  #choice .choice-title {
-    font-size: 2.5rem; /* Уменьшенный размер шрифта для заголовка */
-  }
-  /* Уменьшение размера кнопок */
-  #choice .choice-btn {
-    font-size: 1rem; /* Уменьшенный размер шрифта кнопок */
-    padding: 15px 25px; /* Уменьшенные внутренние отступы */
-  }
-  /* Стили для верхнего левого декоративного изображения */
-  #choice .img-top.img-left {
-    height: 25vh; /* Уменьшенный размер верхнего левого изображения */
-  }
-  /* Стили для верхнего правого декоративного изображения */
-  #choice .img-top.img-right {
-    height: 30vh; /* Уменьшенный размер верхнего правого изображения */
-  }
-  /* Стили для центрального правого декоративного изображения */
-  #choice .img-right {
-    top: 12%; /* Позиционирование ближе к верху для центрирования */
-    right: 0; /* Выравнивание по правому краю */
-    transform: translateY(-50%); /* Смещение для точного центрирования по вертикали */
-    height: 90vh; /* Крупный размер центрального правого изображения */
-  }
-  /* Стили для нижнего левого декоративного изображения */
-  #choice .img-bottom.img-left {
-    height: 70vh; /* Уменьшенный размер нижнего левого изображения */
-  }
-  /* Уменьшение размера заголовка в секции фотографий */
-  #photo-section h2 {
-    font-size: 2rem; /* Уменьшенный размер шрифта заголовка */
-  }
-}
-
-/* Адаптивные стили для экранов с шириной до 768px */
-@media (max-width: 768px) {
-  /* Дальнейшее уменьшение размера заголовка в секции выбора */
-  #choice .choice-title {
-    font-size: 2rem; /* Уменьшенный размер шрифта для мобильных устройств */
-  }
-  /* Уменьшение размера кнопок для мобильных устройств */
-  #choice .choice-btn {
-    font-size: 0.9rem; /* Минимальный размер шрифта кнопок */
-    padding: 12px 20px; /* Уменьшенные внутренние отступы */
-  }
-  /* Стили для верхнего левого декоративного изображения */
-  #choice .img-top.img-left {
-    top: 25%; /* Сохранение положения в верхнем левом углу */
-    left: 0; /* Выравнивание по левому краю */
-    height: 30vw; /* Уменьшенный размер для малых экранов */
-  }
-  /* Стили для верхнего правого декоративного изображения */
-  #choice .img-top.img-right {
-    top: 0%; /* Сохранение положения в верхнем правом углу */
-    right: 0; /* Выравнивание по правому краю */
-    height: 70vw; /* Уменьшенный размер для малых экранов */
-  }
-  /* Стили для центрального правого декоративного изображения */
-  #choice .img-right {
-    top: 65%; /* Позиционирование ближе к верху для центрирования */
-    right: 0; /* Выравнивание по правому краю */
-    transform: translateY(-50%); /* Смещение для точного центрирования по вертикали */
-    height: 70vh; /* Крупный размер центрального правого изображения */
-  }
-  /* Стили для нижнего левого декоративного изображения */
-  #choice .img-bottom.img-left {
-    bottom: 0; /* Выравнивание по нижнему краю */
-    left: 0; /* Выравнивание по левому краю */
-    height: 70vw; /* Уменьшенный размер нижнего левого изображения */
-  }
-  /* Уменьшение минимальной ширины колонок в галерее фотографий */
-  #photo-section .photo-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Адаптивная сетка с уменьшенными колонками */
-  }
-}
-
-/* Адаптивные стили для экранов с шириной до 576px */
+/* Адаптация для маленьких экранов */
 @media (max-width: 576px) {
-  /* Минимальный размер заголовка в секции выбора */
-  #choice .choice-title {
-    font-size: 1.5rem; /* Минимальный размер шрифта для мобильных устройств */
-  }
-  /* Полноширинные кнопки с минимальным размером */
-  #choice .choice-btn {
-    font-size: 0.9rem; /* Минимальный размер шрифта кнопок */
-    padding: 10px 15px; /* Минимальные внутренние отступы */
-    width: 100%; /* Полная ширина кнопок */
-    margin-bottom: 0.5rem; /* Отступ между кнопками */
-  }
-  /* Вертикальное расположение кнопок */
-  #choice .choice-buttons {
-    flex-direction: column; /* Кнопки располагаются в столбец */
-  }
-  /* Стили для верхнего левого декоративного изображения */
-  #choice .img-top.img-left {
-    top: 22%; /* Сохранение положения в верхнем левом углу */
-    left: 0; /* Выравнивание по левому краю */
-    height: 35vw; /* Минимальный размер изображения */
-  }
-  /* Стили для верхнего правого декоративного изображения */
-  #choice .img-top.img-right {
-    top: 0%; /* Сохранение положения в верхнем правом углу */
-    right: -10%; /* Выравнивание по правому краю */
-    height: 80vw; /* Минимальный размер изображения */
-  }
-  /* Стили для центрального правого декоративного изображения */
-  #choice .img-right {
-    top: 70%; /* Позиционирование ближе к верху для центрирования */
-    right: 0; /* Выравнивание по правому краю */
-    transform: translateY(-50%); /* Смещение для точного центрирования по вертикали */
-    height: 150vw; /* Крупный размер центрального правого изображения */
-  }
-  /* Стили для нижнего левого декоративного изображения */
-  #choice .img-bottom.img-left {
-    bottom: 0; /* Выравнивание по нижнему краю */
-    left: 0; /* Выравнивание по левому краю */
-    height: 90vw; /* Минимальный размер нижнего левого изображения */
-  }
-  /* Минимальный размер заголовка в секции фотографий */
-  #photo-section h2 {
-    font-size: 1.5rem; /* Минимальный размер шрифта для мобильных устройств */
-  }
-  /* Одна колонка в галерее фотографий для маленьких экранов */
-  #photo-section .photo-gallery {
-    grid-template-columns: 1fr; /* Одна колонка для компактного отображения */
-  }
-  /* Ограничение длительности анимаций для мобильных устройств */
-  #choice .dur-150,
-  #choice .dur-2,
-  #choice .dur-3 {
-    animation-duration: 1.5s; /* Максимальная длительность анимации 1.5с */
-  }
-  /* Ограничение длительности анимации для содержимого секции выбора */
-  #choice .choice-content {
-    animation-duration: 1.5s; /* Максимальная длительность для анимации focus-in */
-  }
-
-
-
-
-
-
-
-
-/* ---------- full-page / book-like layout ---------- */
-/* Каждая секция = полный экран, без прокрутки страницы */
-html, body {
-  height: 100%;
-  margin: 0;
-  /* Отключаем обычную прокрутку страницы — навигация внутри страниц будет отдельная */
-  overflow: hidden;
+    .home section.hero h1.bigtext {
+        margin-top: -190px; /* чуть меньше подъем на маленьких экранах */
+        font-size: 1.8rem; /* можно чуть уменьшить текст, если нужно */
+    }
 }
 
-/* Принцип: секции имеют 100vh и по умолчанию скрыты через .hidden */
-.section {
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  display: flex;            /* показываем как flex, но управление видимостью через .hidden/.visible */
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;        /* чтобы внутри секции тоже не было вертикального скролла */
-}
 
-/* Скрытые и видимые состояния */
+
+
+/* сокрытие блоков*/ 
+/* универсальное скрытие */
 .hidden {
-  display: none !important;
-}
-.visible {
-  display: flex !important;
-  animation: pageIn 400ms ease;
+    display: none !important;
 }
 
-/* Анимация появления страницы */
-@keyframes pageIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* контейнер ветки — ведёт себя как обычный поток страниц */
+.branch-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Навигационные стрелки (влево/вправо) */
-.page-nav-arrow {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 9999;
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  background: rgba(255,255,255,0.9);
+/* плавное появление */
+.branch-content.fade-in {
+    animation: branchFadeIn 0.5s ease forwards;
 }
-.page-nav-arrow.prev { left: 1rem; }
-.page-nav-arrow.next { right: 1rem; }
-
-/* Кнопка "назад к выбору" */
-.back-to-choice {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 9999;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  font-family: 'Work Sans', sans-serif;
-  cursor: pointer;
-  display: none; /* показываем только когда открыта группа страниц (не на начальных 3) */
+@keyframes branchFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* небольшая стилизация активной кнопки выбора (опционально) */
-.choice-buttons .choice-btn.active {
-  box-shadow: var(--shadow-1-elevation-high);
-  transform: scale(1.03);
+/* стиль кнопки возврата — аккуратно и в тему */
+.back-btn {
+    margin: 3rem 0 6rem;
+    padding: 10px 22px;
+    border-radius: 28px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: transparent;
+    color: var(--green);
+    font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.back-btn:hover {
+    background: var(--light-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* адаптив (убрать стрелки на мобильных, НЕ ОБЯЗАТЕЛЬНО) */
-@media (max-width: 600px) {
-  .page-nav-arrow { display: none; }
-  .back-to-choice { left: 0.6rem; top: 0.6rem; padding: 6px 10px; }
-}
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 
@@ -3289,68 +1380,69 @@ html, body {
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
 /*egor-story*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
-
+/* Стили для галереи */
 .fairy-gallery {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: var(--beige, #f6f2e9); /* Бежевый фон */
-    min-height: 100vh; /* Полная высота экрана */
-    overflow: hidden; /* Скрываем переполнение для лоз */
+    background: var(--beige, #f6f2e9);
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Стили для слайдов */
 .fairy-slide {
     position: absolute;
     opacity: 0;
-    transform: scale(0.8) translateY(20px); /* Плавный вход снизу */
-    transition: opacity 1s ease, transform 1s ease; /* Плавные переходы */
+    transform: scale(0.7) translateY(20px); /* Уменьшенный масштаб слайдов */
+    transition: opacity 0.8s ease, transform 0.8s ease;
     text-align: center;
-    width: 100%;
-    max-width: 800px; /* Ограничение ширины для больших экранов */
-    padding: 20px;
+    width: 70%;
+    max-width: 400; /* Уменьшена максимальная ширина */
+    padding: 15px;
+    z-index: 2; /* Слайды над лозами */
 }
 
 .fairy-slide.active {
     opacity: 1;
-    transform: scale(1) translateY(0); /* Активный слайд в нормальном масштабе */
+    transform: scale(1) translateY(0);
 }
 
 /* Стили для изображений */
 .fairy-slide .image-wrapper {
     width: 100%;
-    max-width: 600px; /* Ограничение ширины изображения */
-    margin: 0 auto;
+    max-width: 450px; /* Уменьшен размер изображений */
+    margin: 0 auto 1rem;
 }
 
 .fairy-slide img {
     width: 100%;
-    height: auto; /* Сохраняем пропорции */
-    border-radius: 25px;
-    animation: pulse-glow 2s ease-in-out infinite; /* Пульсирующая подсветка */
+    height: auto;
+    border-radius: 15px;
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Анимация пульсирующего свечения */
+/* Пульсирующая подсветка */
 @keyframes pulse-glow {
     0% {
-        box-shadow: 0 0 10px var(--glow-color, rgba(255, 182, 193, 0.4));
+        box-shadow: 0 0 8px var(--glow-color, rgba(255, 182, 193, 0.4));
     }
     50% {
-        box-shadow: 0 0 30px var(--glow-color, rgba(255, 182, 193, 0.4));
+        box-shadow: 0 0 20px var(--glow-color, rgba(255, 182, 193, 0.6));
     }
     100% {
-        box-shadow: 0 0 10px var(--glow-color, rgba(255, 182, 193, 0.4));
+        box-shadow: 0 0 8px var(--glow-color, rgba(255, 182, 193, 0.4));
     }
 }
 
 /* Стили для текста */
 .fairy-slide p {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
-    max-width: 600px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -3362,24 +1454,22 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Лозы не мешают взаимодействию */
-    z-index: 1; /* Лозы под слайдами */
+    pointer-events: none;
+    z-index: 1;
 }
 
-/* Стили для изображений лоз */
 .vine {
     position: absolute;
-    opacity: 0; /* Изначально скрыты */
-    transition: opacity 1s ease; /* Плавное появление */
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-/* Стили для бутонов на последнем слайде */
+/* Стили для бутонов */
 .buds-container {
     position: absolute;
-    top: 10%;
-    right: 10%;
-    width: 200px; /* Размер бутонов */
-    height: auto;
+    top: 5%;
+    right: 5%;
+    width: 150px;
 }
 
 .buds {
@@ -3391,24 +1481,26 @@ html, body {
 }
 
 .buds.closed-buds {
-    opacity: 1; /* Закрытые бутоны видны изначально */
+    opacity: 1;
 }
 
 .buds.open-buds.active {
-    opacity: 1; /* Открытые бутоны появляются */
+    opacity: 1;
 }
 
 /* Кнопки управления */
 .control-buttons {
-    position: fixed;
-    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 20px; /* Кнопки внизу секции */
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 1rem;
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 3;
+    flex-direction: row-reverse; /* Справа налево */
 }
 
 .control-buttons.active {
@@ -3417,49 +1509,286 @@ html, body {
 
 .control-buttons a {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.1rem;
-    padding: 12px 24px;
-    background: var(--green, #4CAF50); /* Цвет кнопок */
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: var(--green, #4CAF50);
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .control-buttons a:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
+    .fairy-slide {
+        max-width: 80%;
+    }
     .fairy-slide .image-wrapper {
-        max-width: 85%;
+        max-width: 90%;
     }
     .fairy-slide p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .buds-container {
-        width: 150px; /* Меньший размер бутонов */
-        top: 5%;
-        right: 5%;
+        width: 120px;
+        top: 3%;
+        right: 3%;
     }
 }
 
 @media (max-width: 576px) {
+    .fairy-slide {
+        max-width: 90%;
+    }
     .fairy-slide .image-wrapper {
         max-width: 95%;
     }
     .fairy-slide p {
-        font-size: 1rem;
-    }
-    .control-buttons {
-        flex-direction: column;
+        font-size: 0.9rem;
     }
     .buds-container {
-        width: 100px;
+        width: 80px;
         top: 2%;
         right: 2%;
     }
+    .control-buttons a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* фиксация слайдшоу на весь экран */
+#egor-story.fixed {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--beige, #f6f2e9);
+  z-index: 999;
+  overflow: hidden;        /* чтобы не было внутреннего скролла */
+}
+
+
+
+
+.hidden {
+  display: none;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.lock-scroll {
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* Подписи к слайдам */
+.fairy-slide p {
+    font-family: 'Cormorant Garamond', serif; /* шрифт как на сайте */
+    font-size: 1.4rem;                       /* основной размер текста */
+    line-height: 1.6;                        /* для комфортного чтения */
+    color: var(--text, #333333);             /* основной цвет текста на сайте */
+    max-width: 450px;                         /* ограничение ширины */
+    margin: 1rem auto 0;                      /* отступ сверху и выравнивание по центру */
+    text-align: center;                       /* центрируем текст */
+    opacity: 0;                               /* изначально невидимый для анимации */
+    transform: translateY(10px);              /* чуть смещён для эффекта появления */
+    transition: opacity 1.8s ease, transform 1.8s ease; /* плавное появление */
+}
+
+/* При активном слайде текст плавно появляется */
+.fairy-slide.active p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Для адаптива */
+@media (max-width: 768px) {
+    .fairy-slide p {
+        font-size: 1.2rem;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .fairy-slide p {
+        font-size: 1rem;
+        max-width: 90%;
+        padding: 0 1rem;
+    }
+}
+
+
+
+
+/* Ensure #egor-story is a positioning context */
+#egor-story {
+  position: relative; /* Make #egor-story the reference for absolute positioning */
+  min-height: 100vh; /* Ensure section has enough height */
+}
+
+/* Контейнер для плавающих кнопок */
+.floating-buttons {
+  position: absolute; /* Pin to bottom of #egor-story */
+  bottom: 5px; /* 5px offset from bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Center buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 1.5rem; /* Space between buttons */
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px); /* Include translateX in initial state */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 10; /* Above slides */
+}
+
+/* Показываем кнопки с анимацией */
+.floating-buttons.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Center and move up */
+}
+
+/* Основной стиль кнопок */
+.floating-btn {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  padding: 12px 26px; /* Match .button.choice-btn */
+  background-color: transparent; /* Transparent background */
+  color: var(--green); /* Light khaki green text */
+  border: 1.8px solid var(--green); /* Light khaki green border */
+  border-radius: 30px; /* Oval shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.floating-btn:hover {
+  background-color: var(--light-green); /* Light khaki green background on hover */
+  color: white;
+  border-color: var(--light-green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.floating-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+
+
+
+
+
+
+/* ==== FULLPAGE SNAP ==== */
+html, body { height: 100%; }
+body {
+  scroll-snap-type: y mandatory;      /* включаем прилипания по вертикали */
+  overscroll-behavior-y: contain;      /* убираем «протяжку» на мобильных */
+  scroll-behavior: smooth;             /* плавные переходы по якорям/JS */
+}
+
+/* каждую section фиксируем на старт экрана */
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;                   /* секции по умолчанию во весь экран */
+}
+
+/* но секция выбора истории (#choice) — длинная: не насилуем 100vh */
+#choice {
+  height: auto;
+  min-height: 100vh;                   /* старт — на весь экран, дальше — свободный скролл внутри */
+  scroll-snap-align: start;            /* липнем к началу этой секции */
+}
+
+/* ===== Плавное появление текста только когда секция активна (#welcome) ===== */
+/* У тебя абзацы уже имеют класс .fade-in-paragraph — просто ставим паузу до активации */
+.fade-in-text .fade-in-paragraph {
+  animation-play-state: paused;  /* стоп до входа секции в вьюпорт */
+  opacity: 0;
+}
+.fade-in-text.run .fade-in-paragraph {
+  animation-play-state: running; /* запускаем, когда секция активна */
+}
+
+
+
+
+
+
+
+
+
+
+/* СНАП для веток (чтобы они тоже были "экранами") */
+.branch-content {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+
+/* Универсальная фиксация слайдшоу на весь экран для любой ветки */
+.story-section.fixed {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--beige, #f6f2e9);
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* Базовые стили для контейнеров слайдшоу (и Егор, и Даша) */
+.story-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* если хочешь, можно оставить старый селектор ради совместимости */
+#egor-story.fixed { /* не мешает, но уже не обязателен */ }
+
+/* МЕЛКИЙ БАГ: у .fairy-slide max-width без px — добавь "px" */
+.fairy-slide { 
+  /* ... */
+  max-width: 400px; /* <- было max-width: 400; */
+}
+
+
+
+
+

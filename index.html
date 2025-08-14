@@ -26,11 +26,6 @@
     <script src="https://kit.fontawesome.com/3b059272ba.js" crossorigin="anonymous"></script>
 </head>
 <body class="home">
-    <div class="rsvp slide-in-blurred-br dur-350">
-        <a href="https://forms.office.com/" target="_blank">
-            <img src="assets/RSVP-2.png" alt="RSVP Button">
-        </a>
-    </div>
 
     <section class="hero section">
         <img class="img-over img-top img-left slide-in-blurred-tl dur-250" src="assets/Foglie.png" alt="Decorative image">
@@ -60,33 +55,196 @@
                Спасибо за нас.</p>
         </div>
     </section>
+	
+	
+<!-- Обновленный HTML код сайта с интеграцией слайд-шоу для Егора -->
 
-    <section id="choice" class="section alt">
-        <img class="img-over img-top img-left slide-in-blurred-tl dur-150 del-025" src="assets/цветочек 6.png" alt="Top-left decoration">
-        <img class="img-over img-top img-right slide-in-blurred-tr dur-150 del-050" src="assets/фоновыйцветочек 5.png" alt="Top-right decoration">
-        <img class="img-over img-bottom img-left slide-in-blurred-bl dur-150 del-075" src="assets/фоновыйцветочек2.png" alt="Bottom-left decoration">
-        <img class="img-over img-right slide-in-blurred-br dur-150 del-1" src="assets/фоновыйцветочек 4.png" alt="Right-center decoration">
-        <div class="choice-content focus-in dur-150">
-            <h1 class="choice-title">Выберите историю</h1>
-            <div class="choice-buttons">
-                <button class="button choice-btn" onclick="showSection('darya')">Дарья и её семья</button>
-                <button class="button choice-btn" onclick="showSection('egor')">Егор и его семья</button>
-            </div>
+<section id="choice" class="standard alt">
+    <p class="bigtext">
+        В каждом из нас живёт история, которую <span class="daje">вы начали</span>
+    </p>
+    <div class="columns">
+        <!-- Колонка про маму/родителей невесты -->
+        <div class="column">
+            <p class="smalldetail">История невесты</p>
+            <div class="divider"></div>
+            <h3>От первых шагов до этого дня</h3>
+            <p class="description">
+                Мама, папа… всё, что я умею любить, хранить и ценить — от вас. 
+                Ваши руки, ваш взгляд, ваше тепло всегда были рядом, ведя меня к этому дню.	 
+                Здесь — моя история, вплетённая в вашу любовь.
+            </p>
+            <button class="button choice-btn" onclick="showSection('darya-content')">Моя история</button>
         </div>
-    </section>
 
-    <section id="darya-story" class="section story-section hidden">
-        <div class="bigtext focus-in dur-2">
-            <h2>История Дарьи</h2>
-            <p>Дарья росла в окружении заботы и тепла своей семьи. Её мама всегда учила её видеть красоту в мелочах, а папа — быть смелой и идти к своим мечтам.</p>
-            <div class="photo-gallery">
-                <img src="assets/darya1.png" alt="Darya photo 1" class="focus-in dur-150">
-                <img src="assets/darya2.png" alt="Darya photo 2" class="focus-in dur-150">
-            </div>
+        <!-- Колонка про маму/родителей жениха -->
+        <div class="column">
+            <p class="smalldetail">История жениха</p>
+            <div class="divider"></div>
+            <h3>Дорога, что мы несём в сердце</h3>
+            <p class="description">
+                Вы научили меня быть сильным, честным и верным своему слову.  
+                Ваш пример стал для меня ориентиром, а ваша поддержка — опорой.	 
+                Здесь — моя история, которую я пишу, опираясь на всё, что вы мне дали.
+            </p>
+            <button class="button choice-btn" onclick="showSection('egor-content')">Мой путь</button>
         </div>
-    </section>
+    </div>
+</section>
 
-	<section id="egor-story" class="section story-section fairy-gallery">
+	<!-- ===== Контейнеры для веток (изначально скрыты) ===== -->
+	<div id="darya-content" class="branch-content hidden">
+		
+			  <section id="darya-story" class="section story-section fairy-gallery">
+			  
+			  	    <!-- Контейнер для лоз -->
+		<div class="vine-container">
+			<!-- Лозы будут добавляться через JS -->
+		</div>
+
+
+				   <!-- 1. Мать и отец держат Дашу на руках при выходе из роддома -->
+				<div class="fairy-slide active" data-glow-color="rgba(255, 200, 150, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets\Darya/Роддом.jpg" alt="Даша с родителями на выходе из роддома">
+					</div>
+					<p>Первые объятия, первые взгляды… тогда я почувствовала, что любовь существует с первого дыхания.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 182, 193, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets\Darya/ДержатНаРуках1.jpg" alt="Даша новорожденная на руках">
+					</div>
+					<p>Тепло рук, которые дарили мне ощущение безопасности и нежности, когда я была совсем крохой.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 230, 200, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets\Darya/ДержатНаРуках2.jpg" alt="Даша на руках">
+					</div>
+					<p>Каждое объятие было наполнено заботой и любовью, которые оставили след в моём сердце навсегда.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 215, 0, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/ОтецНаРуках.jpg" alt="Даша на руках у отца">
+					</div>
+					<p>Папины сильные руки всегда давали мне уверенность — я знала, что с вами рядом я могу всё.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 182, 200, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/МамаНаРуках.jpg" alt="Даша на руках у мамы">
+					</div>
+					<p>Её объятия согревали так, что казалось — весь мир стал добрее, когда она рядом.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(200, 230, 255, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/СнегСМамой.jpg" alt="Даша с мамой под снегом">
+					</div>
+					<p>Смеясь вместе, мы делили радость простых моментов, которые останутся в сердце навсегда.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 215, 180, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/ОбнимаетОтца.jpg" alt="Даша обнимает отца">
+					</div>
+					<p>Объятия, в которых чувствовалась поддержка, любовь и то, что рядом всегда есть вы, те кто верит в меня.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 250, 200, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/ГрамотаМедаль.jpg" alt="Даша с грамотой и медалью">
+					</div>
+					<p>Каждое достижение — это отражение вашей веры и заботы. Спасибо, что всегда были рядом.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(180, 255, 200, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/Река.jpg" alt="Даша и отец на реке">
+					</div>
+					<p>В моменты радости и смеха я ощущала, что вместе мы можем взлететь выше неба.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 180, 180, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/Костер.jpg" alt="Даша и отец прыгают через костер">
+					</div>
+					<p>Смелость и радость вместе с вами навсегда останутся частью моего сердца.</p>
+				</div>
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(255, 220, 240, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/НаграждениеМама.jpg" alt="Мама и Даша нарядные">
+					</div>
+					<p>Гордость за вас и за всё, что вы сделали для меня, отражалась в каждом взгляде того дня.</p>
+				</div>
+
+
+				
+				<div class="fairy-slide" data-glow-color="rgba(200, 255, 220, 0.4)">
+					<div class="image-wrapper">
+						<img src="assets/Darya/СемьяНаГазоне.jpg" alt="Вся семья лежит на газоне">
+					</div>
+					<p>Семья — это любовь, забота и тепло, которые сопровождали меня на каждом шаге жизни. Спасибо, что вы всегда были рядом.</p>
+				</div>
+
+				<!-- Кнопки управления -->
+				<div class="control-buttons">
+				  <a href="#" class="next">Далее</a>
+				  <a href="#" class="repeat">Повторить</a>
+				</div>
+
+				<!-- Плавающие кнопки -->
+				<div class="floating-buttons hidden">
+				  <button class="floating-btn repeat-slideshow">Повторить</button>
+				  <button class="floating-btn continue">Продолжить</button>
+				</div>
+		  </section>
+
+<!-- Финальный экран истории Даши -->
+<section class="hero" style="position: relative;">
+    <img class="img-over img-bottom img-right slide-in-blurred-br dur-2" 
+         src="assets/colibri.png" 
+         style="width: 330px; height: auto; bottom: 10px; right: 10px;">
+    <div style="margin-top: -130px;"> <!-- сдвигаем текст вверх, уменьшая отступ сверху -->
+        <h1 style="font-size: 20px; line-height: 1.5;">
+            Я выросла в любви и заботе, которыми меня окружали с самого первого дня. 
+            Всё, чему вы меня научили, вся ваша поддержка и тепло стали частью меня. 
+            Сегодня я несу это в свою жизнь, в свой дом и в своё сердце, 
+            чтобы любовь, внимание и благодарность, которые вы мне дали, продолжали жить дальше. 
+            Спасибо вам за всё — за каждое объятие, каждый совет и каждое мгновение вместе. 
+            Я — это ваша любовь, и я хочу, чтобы она жила в мире, который я строю вокруг себя.
+        </h1>
+    </div>
+    <div class="navigation">
+        <div class="menu">
+            <a href="#" id="toChoiceDarya">К выбору истории</a>
+        </div>
+    </div>
+</section>
+      </div>
+
+
+
+
+
+
+
+
+<div id="egor-content" class="branch-content hidden">
+  <section id="egor-story" class="section story-section fairy-gallery">
 	    <!-- Контейнер для лоз -->
 		<div class="vine-container">
 			<!-- Лозы будут добавляться через JS -->
@@ -100,15 +258,15 @@
 			<p>С самого первого дня вы согревали меня своей любовью. Мам, твои руки — моё первое убежище.</p>
 		</div>
 
-		<!-- 2. Велосипед с папой и цветами -->
+		
 		<div class="fairy-slide" data-glow-color="rgba(255, 182, 193, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/Велосипед.jpg" alt="Егор на велосипеде с папой">
 			</div>
-			<p>Папа, спасибо, что учил меня радоваться простым моментам — даже сидя на велосипеде с цветами в руках.</p>
+			 <p>Папа, спасибо, что учил меня радоваться простым моментам — даже сидя на велосипеде.</p>
 		</div>
 
-		<!-- 3. Мама и папа держат Егора на руках -->
+		
 		<div class="fairy-slide" data-glow-color="rgba(240, 248, 255, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/МамаИПапа.jpg" alt="Мама и папа с Егором на руках">
@@ -116,7 +274,7 @@
 			<p>Вы поднимали меня выше, чем я мог стоять, и дарили уверенность, что рядом всегда будет любовь.</p>
 		</div>
 
-		<!-- 4. Дядя и тётя с Егором -->
+	
 		<div class="fairy-slide" data-glow-color="rgba(255, 215, 0, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/ДядяТетя.jpg" alt="Дядя и тётя с Егором">
@@ -124,7 +282,7 @@
 			<p>Спасибо всем, кто с детства был рядом. Ваши улыбки и тепло сделали моё детство светлым.</p>
 		</div>
 
-		<!-- 5. Дядя поит молоком -->
+	
 		<div class="fairy-slide" data-glow-color="rgba(255, 245, 238, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/ДядяНапоилМолоком.jpg" alt="Дядя поит молоком">
@@ -132,7 +290,7 @@
 			<p>Вы кормили меня не только молоком — но и заботой, терпением и добротой.</p>
 		</div>
 
-		<!-- 6. Тётя на качелях -->
+	
 		<div class="fairy-slide" data-glow-color="rgba(255, 182, 193, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/ТетяНаКачелях.jpg" alt="Тётя с Егором на качелях">
@@ -140,7 +298,7 @@
 			<p>Спасибо за смех и лёгкость, за те качели, что раскачивали моё детство в счастье.</p>
 		</div>
 
-		<!-- 7. Сестра, дядя и тётя -->
+	
 		<div class="fairy-slide" data-glow-color="rgba(240, 248, 255, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/Сестра.jpg" alt="Сестра, дядя и тётя с Егором">
@@ -148,7 +306,7 @@
 			<p>Моя семья всегда была больше, чем просто мама и папа. У каждого в сердце нашлось место для меня.</p>
 		</div>
 
-		<!-- 8. С гитарой с папой -->
+	
 		<div class="fairy-slide" data-glow-color="rgba(255, 215, 0, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/СГитарой.jpg" alt="Егор с папой и гитарой">
@@ -156,7 +314,7 @@
 			<p>Папа, спасибо, что открывал для меня мир звуков и учил пробовать новое без страха.</p>
 		</div>
 
-		<!-- 9. Отец и Егор (13 лет) -->
+		
 		<div class="fairy-slide" data-glow-color="rgba(255, 245, 238, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/ОтецИЕгор.jpg" alt="Отец и Егор">
@@ -164,7 +322,7 @@
 			<p>Ты всегда был для меня примером силы и доброты. Я горд быть твоим сыном.</p>
 		</div>
 
-		<!-- 10. Мама и Егор (14 лет) -->
+		 
 		<div class="fairy-slide" data-glow-color="rgba(255, 182, 193, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/МамаИЕгор.jpg" alt="Мама и Егор">
@@ -172,31 +330,67 @@
 			<p>Мам, я вырос, но твои объятия — всё так же мой дом.</p>
 		</div>
 
-		<!-- 11. Мама и Егор в касках -->
+		
 		<div class="fairy-slide" data-glow-color="rgba(240, 248, 255, 0.4)">
 			<div class="image-wrapper">
 				<img src="assets/Егор/Шахтеры.jpg" alt="Мама и Егор в касках">
 			</div>
-			<p>Вы научили меня улыбаться, даже когда впереди что-то неизвестное. И всегда верить в лучшее.</p>
-		</div>
+			<!-- <p>Вы научили меня улыбаться, даже когда впереди что-то неизвестное. И всегда верить в лучшее.</p>
+		<!-- </div>
 
-		<!-- 12. Взрослый -->
-		<div class="fairy-slide" data-glow-color="rgba(255, 215, 0, 0.4)">
-			<div class="image-wrapper">
-				<img src="assets/Егор/Взрослый.jpg" alt="Егор взрослый">
-			</div>
-			<p>Вы вели меня через каждый этап жизни — от первых шагов до этого момента, когда я стою взрослым, сильным и готовым к своему пути. Всё, чем я стал, — это ваша любовь, ваш труд и ваше сердце.</p>
-		</div>
+		<!-- <!-- 12. Взрослый 
+		<!-- <div class="fairy-slide" data-glow-color="rgba(255, 215, 0, 0.4)">
+			<!-- <div class="image-wrapper">
+				<!-- <img src="assets/Егор/Взрослый.jpg" alt="Егор взрослый">
+			<!-- </div>
+			<!-- <p>Вы вели меня через каждый этап жизни — от первых шагов до этого момента, когда я стою взрослым, сильным и готовым к своему пути. Всё, чем я стал, — это ваша любовь, ваш труд и ваше сердце.</p>
+		<!-- </div>
+ 
+   <!-- Control buttons -->
+    <div class="control-buttons">
+      <a href="#" class="next">Далее</a>
+      <a href="#" class="repeat">Повторить</a>
+    </div>
+	
+	  <div class="floating-buttons hidden">
+      <button class="floating-btn repeat-slideshow">Повторить</button>
+      <button class="floating-btn continue">Продолжить</button>
+    </div>
+	
+  </section>
 
-		<!-- Кнопки управления -->
-		<div class="control-buttons">
-			<a href="#" class="repeat">Повторить</a>
-			<a href="/history" class="next">Далее</a>
-		</div>
-	</section>
+<section class="hero" style="position: relative;">
+    <img class="img-over img-bottom img-right slide-in-blurred-br dur-2" 
+         src="assets/Pappagalli.png" 
+         style="width: 310px; height: auto; bottom: 10px; right: 10px;">
+    <div style="margin-top: 40px;">
+        <h1 class="bigtext">
+            Мама, папа,<br>
+            с вами каждый момент моей жизни был наполнен теплом и заботой.<br>
+            Вы верили в меня, поддерживали и учили видеть добро в мире.<br>
+            Благодаря вашей любви я стала тем, кто я есть сегодня.<br>
+            Спасибо за ваши объятия, советы и каждое мгновение вместе — я никогда этого не забуду.<br>
+            Ваша любовь живёт во мне и будет сопровождать меня всю жизнь.
+        </h1>
+    </div>
+</section>
+	
+	
+	
+<div class="navigation">
+  <div class="menu">
+    <a href="#" id="toChoice">К выбору истории</a>
+  </div>
+</div>
+	
+	
+</div>
+	
+	
+    
+<audio id="bg-music" src="assets/музыка.mp3" loop></audio>
+     <script src="C:\Users\FakTo\Downloads\Wedding-Website-Template-main\Wedding-Website-Template-main\script.js"></script>
 
-
-
-    <script src="C:\Users\user\Documents\FamilyBeginsWithYou\FamilyBeginsWithYou\Wedding-Website-Template-main\script.js"></script>
 </body>
+
 </html>
