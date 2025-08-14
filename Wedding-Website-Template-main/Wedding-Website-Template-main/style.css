@@ -158,6 +158,32 @@ HOME
 RSVP Button
 ***/
 
+/* Sticks button to the right side and makes sure it stays on top of everything else */
+.rsvp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 4;
+}
+
+/* Defines size of the button and basic effects */
+.rsvp a img {
+    height: 80px;
+    transition: all 0.8s ease-in-out;
+    box-shadow: var(--shadow-2-elevation-medium);
+    border-radius: 100px;
+}
+
+/* Button hover effect */
+.rsvp a:hover img {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-2-elevation-high);
+}
+
+/* section.standard,
+div.box {
+    z-index: 1;
+} */
 
 div.box {
     /* background-color: var(--beige); */
@@ -183,7 +209,7 @@ div.box {
 
 /* Общий стиль абзацев */
 .bigtext p {
-    font-size: clamp(3.0rem, 2.5vw, 2.2rem); 
+    font-size: clamp(1.2rem, 2.5vw, 2.2rem); 
     /* clamp(минимум, адаптив, максимум):
        - минимум 1.2rem на маленьких экранах
        - 2.5vw — адаптив от ширины экрана
@@ -336,6 +362,33 @@ p.subtext a:hover {
     color: var(--red);
 }
 
+/* p.bigtext a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: var(--light-green);
+    z-index: -1;
+    transform: scaleY(.2);
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  p.bigtext a:hover:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--light-green);
+    z-index: -1;
+    border-radius: 8px;
+  } */
 
 img.img-remark {
     width: 40vw;
@@ -423,6 +476,9 @@ PAGE WHERE
     border-radius: 100px;
 }
 
+/* .internal {
+    padding-bottom: 120px;
+} */
 
 div.navigation {
     position: fixed;
@@ -1320,13 +1376,22 @@ a[href^="tel"]{
 }
 
 
-/* Адаптация для маленьких экранов */
-@media (max-width: 576px) {
-    .home section.hero h1.bigtext {
-        margin-top: -190px; /* чуть меньше подъем на маленьких экранах */
-        font-size: 1.8rem; /* можно чуть уменьшить текст, если нужно */
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1377,126 +1442,111 @@ a[href^="tel"]{
 
 
 
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/*egor-story*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////*/
-/* Стили для галереи */
-/* Контейнер галереи, занимающий весь экран */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   Блоки Егора              */
+/* Слайдер */
+/* Контейнер для галереи, занимающий весь экран устройства */
+/* Контейнер для галереи, занимающий весь экран устройства */
 .fairy-gallery {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
     position: relative;
-    background: var(--beige, #f6f2e9);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    background: var(--beige, #f6f2e9); /* Цвет фона галереи */
+    min-height: 100vh; /* Контейнер занимает всю высоту экрана */
+    overflow: hidden; /* Скрытие содержимого, выходящего за пределы */
 }
 
-/* Стили для слайдов */
+/* Стили для каждого слайда */
 .fairy-slide {
     position: absolute;
     opacity: 0;
-    transform: scale(0.7) translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: scale(0.8) translateY(20px); /* Начальный эффект появления слайда */
+    transition: opacity 1s ease, transform 1s ease;
     text-align: center;
-    width: 80%;
-    max-width: 500px;
-    padding: 15px;
-    z-index: 2;
+    width: 70%; /* Ширина слайда на весь экран */
+    max-width: 400px; /* Максимальная ширина слайда */
+    padding: 20px; /* Отступы внутри слайда */
 }
 
+/* Когда слайд активен */
 .fairy-slide.active {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0); /* В нормальном масштабе и без сдвига */
 }
 
-/* Стили для изображений */
+/* Стили для обертки изображения внутри слайда */
 .fairy-slide .image-wrapper {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 1rem;
+    width: 70%; /* Изображение по ширине контейнера */
+    max-width: 400px; /* Ограничение ширины изображения */
+    margin: 0 auto; /* Центрируем изображение */
 }
 
+/* Стили для самого изображения */
 .fairy-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    animation: pulse-glow 2s ease-in-out infinite;
+    width: 100%; /* Изображение растягивается по ширине контейнера */
+    height: auto; /* Сохраняем пропорции изображения */
+    border-radius: 15px; /* Скругляем углы изображения */
+    animation: pulse-glow 2s ease-in-out infinite; /* Пульсирующее свечение */
 }
 
-/* Пульсирующая подсветка */
+/* Анимация пульсирующего свечения для изображений */
 @keyframes pulse-glow {
-    0% { box-shadow: 0 0 8px var(--glow-color, rgba(255, 182, 193, 0.4)); }
-    50% { box-shadow: 0 0 20px var(--glow-color, rgba(255, 182, 193, 0.6)); }
-    100% { box-shadow: 0 0 8px var(--glow-color, rgba(255, 182, 193, 0.4)); }
+    0% {
+        box-shadow: 0 0 10px rgba(255, 182, 193, 0.4); /* Мягкое свечение */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 182, 193, 0.4); /* Усиленное свечение */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 182, 193, 0.4); /* Снижение свечения */
+    }
 }
 
-/* Стили для текста */
+/* Стили для текста под изображением */
 .fairy-slide p {
-    margin-top: 1rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: #333;
-    max-width: 450px;
+    margin-top: 20px; /* Отступ сверху для текста */
+    font-family: 'Cormorant Garamond', serif; /* Шрифт текста */
+    font-size: 1.2rem; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    max-width: 600px; /* Ограничение ширины текста */
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5; /* Межстрочный интервал для удобства чтения */
 }
 
-/* Контейнер для лоз */
-.vine-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
 
-.vine {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-/* Стили для бутонов */
-.buds-container {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 150px;
-}
-
-.buds {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.buds.closed-buds {
-    opacity: 1;
-}
-
-.buds.open-buds.active {
-    opacity: 1;
-}
-
-/* Кнопки управления */
+/* Настройки для кнопок управления */
 .control-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 3;
-    flex-direction: row-reverse;
 }
 
 .control-buttons.active {
@@ -1505,277 +1555,154 @@ a[href^="tel"]{
 
 .control-buttons a {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.1rem;
+    padding: 12px 24px;
     background: var(--green, #4CAF50);
     color: white;
     text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .control-buttons a:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Фиксация слайд-шоу на весь экран */
-#darya-story.fixed, #egor-story.fixed {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--beige, #f6f2e9);
-    z-index: 999;
-    overflow: hidden;
-}
-
-/* Универсальные классы */
-.hidden {
-    display: none;
-}
-
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.lock-scroll {
-    overflow: hidden;
-}
-
-/* Адаптивность */
+/* Мобильная адаптивность: изображения становятся меньше и текст под изображением */
 @media (max-width: 768px) {
-    .fairy-slide {
-        max-width: 80%;
-    }
     .fairy-slide .image-wrapper {
-        max-width: 90%;
+        max-width: 85%; /* Ширина изображения уменьшается */
     }
     .fairy-slide p {
-        font-size: 1.1rem;
-    }
-    .buds-container {
-        width: 120px;
-        top: 3%;
-        right: 3%;
+        font-size: 1.1rem; /* Уменьшаем размер шрифта */
     }
 }
 
+/* Очень маленькие экраны (например, смартфоны): изображения еще меньше */
 @media (max-width: 576px) {
-    .fairy-slide {
-        max-width: 90%;
-    }
     .fairy-slide .image-wrapper {
-        max-width: 95%;
+        max-width: 90%; /* Уменьшаем ширину изображения */
     }
     .fairy-slide p {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Уменьшаем шрифт */
     }
-    .buds-container {
-        width: 80px;
-        top: 2%;
-        right: 2%;
-    }
-    .control-buttons a {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
+    .control-buttons {
+        flex-direction: column; /* Размещаем кнопки вертикально
 
-
-
-
-
-
-/* Подписи к слайдам */
-.fairy-slide p {
-    font-family: 'Cormorant Garamond', serif; /* шрифт как на сайте */
-    font-size: 1.4rem;                       /* основной размер текста */
-    line-height: 1.6;                        /* для комфортного чтения */
-    color: var(--text, #333333);             /* основной цвет текста на сайте */
-    max-width: 450px;                         /* ограничение ширины */
-    margin: 1rem auto 0;                      /* отступ сверху и выравнивание по центру */
-    text-align: center;                       /* центрируем текст */
-    opacity: 0;                               /* изначально невидимый для анимации */
-    transform: translateY(10px);              /* чуть смещён для эффекта появления */
-    transition: opacity 1.8s ease, transform 1.8s ease; /* плавное появление */
-}
-
-/* При активном слайде текст плавно появляется */
-.fairy-slide.active p {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Для адаптива */
-@media (max-width: 768px) {
-    .fairy-slide p {
-        font-size: 1.2rem;
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 576px) {
-    .fairy-slide p {
-        font-size: 1rem;
-        max-width: 90%;
-        padding: 0 1rem;
-    }
-}
-
-
-
-
-/* Ensure #egor-story is a positioning context */
-#egor-story {
-  position: relative; /* Make #egor-story the reference for absolute positioning */
-  min-height: 100vh; /* Ensure section has enough height */
-}
-
-/* Контейнер для плавающих кнопок */
-.floating-buttons {
-  position: absolute; /* Pin to bottom of #egor-story */
-  bottom: 5px; /* 5px offset from bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  justify-content: center; /* Center buttons vertically */
-  align-items: center; /* Center buttons horizontally */
-  gap: 1.5rem; /* Space between buttons */
-  opacity: 0;
-  transform: translateX(-50%) translateY(20px); /* Include translateX in initial state */
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  z-index: 10; /* Above slides */
-}
-
-/* Показываем кнопки с анимацией */
-.floating-buttons.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Center and move up */
-}
-
-/* Основной стиль кнопок */
-.floating-btn {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
-  padding: 12px 26px; /* Match .button.choice-btn */
-  background-color: transparent; /* Transparent background */
-  color: var(--green); /* Light khaki green text */
-  border: 1.8px solid var(--green); /* Light khaki green border */
-  border-radius: 30px; /* Oval shape */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.floating-btn:hover {
-  background-color: var(--light-green); /* Light khaki green background on hover */
-  color: white;
-  border-color: var(--light-green);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-}
-
-.floating-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-
-
-
-
-
-
-
-
-
-/* ==== FULLPAGE SNAP ==== */
-html, body { height: 100%; }
-body {
-  scroll-snap-type: y mandatory;      /* включаем прилипания по вертикали */
-  overscroll-behavior-y: contain;      /* убираем «протяжку» на мобильных */
-  scroll-behavior: smooth;             /* плавные переходы по якорям/JS */
-}
-
-/* каждую section фиксируем на старт экрана */
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;                   /* секции по умолчанию во весь экран */
-}
-
-/* но секция выбора истории (#choice) — длинная: не насилуем 100vh */
-#choice {
-  height: auto;
-  min-height: 100vh;                   /* старт — на весь экран, дальше — свободный скролл внутри */
-  scroll-snap-align: start;            /* липнем к началу этой секции */
-}
-
-/* ===== Плавное появление текста только когда секция активна (#welcome) ===== */
-/* У тебя абзацы уже имеют класс .fade-in-paragraph — просто ставим паузу до активации */
-.fade-in-text .fade-in-paragraph {
-  animation-play-state: paused;  /* стоп до входа секции в вьюпорт */
-  opacity: 0;
-}
-.fade-in-text.run .fade-in-paragraph {
-  animation-play-state: running; /* запускаем, когда секция активна */
-}
-
-
-
-
-
-
-
-
-
-
-/* СНАП для веток (чтобы они тоже были "экранами") */
-.branch-content {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
-}
-
-/* Универсальная фиксация слайдшоу на весь экран для любой ветки */
-.story-section.fixed {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  background: var(--beige, #f6f2e9);
-  z-index: 999;
-  overflow: hidden;
-}
-
-/* Базовые стили для контейнеров слайдшоу (и Егор, и Даша) */
-.story-section {
+/* Блок Егора, который должен быть на весь экран */
+#egor-content {
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh; /* Занимает весь экран */
+  overflow: hidden; /* Скрывает элементы, выходящие за пределы */
 }
 
-/* если хочешь, можно оставить старый селектор ради совместимости */
-#egor-story.fixed { /* не мешает, но уже не обязателен */ }
-
-/* МЕЛКИЙ БАГ: у .fairy-slide max-width без px — добавь "px" */
-.fairy-slide { 
-  /* ... */
-  max-width: 400px; /* <- было max-width: 400; */
+/* Контейнер с слайдами */
+.fairy-gallery {
+  display: flex;
+  align-items: center; /* Центрируем содержимое по вертикали */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  position: relative;
+  background: var(--beige, #f6f2e9);
+  height: 100vh; /* Контейнер будет занимать весь экран */
+  overflow: hidden; /* Чтобы слайды не выходили за пределы */
 }
 
+/* Стили для каждого слайда */
+.fairy-slide {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px); /* Начальный эффект появления слайда */
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  width: 80%; /* Ширина слайда */
+  max-width: 500px;
+  padding: 20px;
+  z-index: 1; /* Убедимся, что слайды в пределах экрана */
+}
 
+/* Когда слайд активен */
+.fairy-slide.active {
+  opacity: 1;
+  transform: scale(1) translateY(0); /* В нормальном масштабе */
+}
 
+/* Птичка */
+.img-over {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10; /* Птичка поверх слайдов */
+  width: 150px;
+  animation: slideIn 2s ease-out;
+}
 
+/* Анимация птички */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+/* Настройки для кнопок управления */
+.control-buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 3;
+}
+
+.control-buttons.active {
+  opacity: 1;
+}
+
+.control-buttons a {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  background: var(--green, #4CAF50);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Для мобильных экранов */
+@media (max-width: 768px) {
+  .fairy-slide .image-wrapper {
+    max-width: 85%;
+  }
+
+  .fairy-slide p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .fairy-slide .image-wrapper {
+    max-width: 90%;
+  }
+
+  .fairy-slide p {
+    font-size: 1rem;
+  }
+
+  .control-buttons {
+    flex-direction: column;
+  }
+}
