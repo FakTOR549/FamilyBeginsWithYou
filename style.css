@@ -1776,6 +1776,16 @@ section {
 }
 
 
-
+@media (max-width: 576px) {
+  .floating-buttons {
+    bottom: 20px; /* чуть выше, чтобы влезли */
+    flex-direction: column; /* остаётся столбиком */
+    gap: 1rem; /* меньше расстояние между кнопками */
+  }
+  .floating-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px; /* компактнее */
+  }
+}
 
 
