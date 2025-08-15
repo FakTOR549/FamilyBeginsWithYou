@@ -17,6 +17,48 @@ const toStartDarya  = document.getElementById('toStartDarya');
 const toChoiceDarya = document.getElementById('toChoiceDarya');
 
   const welcomeSection = document.getElementById('welcome');
+const audio = document.getElementById('bg-music');
+if (!audio) {
+  console.error('Audio element with id "bg-music" not found. Please add <audio id="bg-music" src="path/to/music.mp3" loop> to your HTML.');
+  return;
+}
+  
+  let musicStarted = false;
+
+function fadeVolume(el, from, to, duration) {
+  const steps = 30;
+  let currentStep = 0;
+  const stepTime = duration / steps;
+  el.volume = from;
+  const interval = setInterval(() => {
+    currentStep++;
+    el.volume = from + (to - from) * (currentStep / steps);
+    if (currentStep >= steps) clearInterval(interval);
+  }, stepTime);
+}
+
+function startMusic() {
+  if (!musicStarted) {
+    audio.play().then(() => {
+      fadeVolume(audio, 0, 0.3, 3000); // плавный старт за 3 сек
+      musicStarted = true;
+    }).catch(err => {
+      console.log('Автоплей заблокирован, ждём клика:', err);
+    });
+  }
+}
+
+function stopMusic() {
+  fadeVolume(audio, audio.volume, 0, 3000); // плавно убавить громкость
+  setTimeout(() => audio.pause(), 3000); // стоп после затухания
+  musicStarted = false;
+}
+
+// Запускаем музыку при первом взаимодействии
+['click', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
+  window.addEventListener(evt, startMusic, { once: true });
+});
+
 
   // Навигация "В начало"
   if (toStart) {
@@ -173,24 +215,28 @@ if (toChoiceDarya) {
     let index = 0;
     let autoTimer;
 
-    function render() {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        const glow = slide.dataset.glowColor || 'rgba(255, 182, 193, 0.4)';
-        slide.style.setProperty('--glow-color', glow);
-      });
+function render() {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    const glow = slide.dataset.glowColor || 'rgba(255, 182, 193, 0.4)';
+    slide.style.setProperty('--glow-color', glow);
+  });
 
-      nextBtn.textContent = index === slides.length - 1 ? 'Завершить' : 'Далее';
+  nextBtn.textContent = index === slides.length - 1 ? 'Завершить' : 'Далее';
 
-      if (index === slides.length - 1) {
-        clearInterval(autoTimer);
-        floatingButtons.classList.remove('hidden');
-        floatingButtons.classList.add('show');
-      } else {
-        floatingButtons.classList.add('hidden');
-        floatingButtons.classList.remove('show');
-      }
-    }
+if (index === slides.length - 1) {
+  stopMusic(); // Остановка музыки на последнем слайде
+}
+
+  if (index === slides.length - 1) {
+    clearInterval(autoTimer);
+    floatingButtons.classList.remove('hidden');
+    floatingButtons.classList.add('show');
+  } else {
+    floatingButtons.classList.add('hidden');
+    floatingButtons.classList.remove('show');
+  }
+}
 
     function goNext() {
       if (index < slides.length - 1) {
@@ -293,56 +339,3 @@ if (toChoiceDarya) {
 
 
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const audio = document.getElementById('bg-music');
-  audio.volume = 0; // стартуем с тишины
-  let started = false;
-
-  // Запуск при первом взаимодействии
-  function startMusic() {
-    if (!started) {
-      audio.play().catch(e => console.log('Автоплей заблокирован:', e));
-      fadeVolume(audio, 0, 0.3, 3000); // плавный старт до 0.3 за 3 сек
-      started = true;
-    }
-  }
-
-  ['click', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
-    window.addEventListener(evt, startMusic, { once: true });
-  });
-
-  // Плавное изменение громкости
-  function fadeVolume(element, from, to, duration) {
-    let start = null;
-    function step(timestamp) {
-      if (!start) start = timestamp;
-      let progress = (timestamp - start) / duration;
-      if (progress > 1) progress = 1;
-      element.volume = from + (to - from) * progress;
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  // Когда доходим до второго блока (#welcome) — громче
-  const secondBlock = document.getElementById('welcome');
-  if (secondBlock) {
-    new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        fadeVolume(audio, audio.volume, 0.6, 2000);
-      }
-    }, { threshold: 0.5 }).observe(secondBlock);
-  }
-
-  // Финальные экраны (оба) — тише
-  document.querySelectorAll('.branch-content .hero').forEach(finalSection => {
-    new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        fadeVolume(audio, audio.volume, 0.1, 3000);
-      }
-    }, { threshold: 0.5 }).observe(finalSection);
-  });
-});
